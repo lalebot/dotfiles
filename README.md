@@ -1,13 +1,12 @@
 # Archlinux Configuration
 
-
 ### Shell
-
 Terminal emulator
 ```bash
 $ yaourt -S guake sakura konsole
 ```
 
+Fish shell
 ```bash
 $ yaourt -S fish # Install fish
 $ chsh -s /usr/bin/fish # Default fish
@@ -20,9 +19,8 @@ $ nano .config/fish/config.fish # Change theme to "agnoster"
 
 
 ### Openbox
-
 ```bash
-$ yaourt -S openbox obmenu obkey obconf lxappearance slim slim-themes xorg-xev menumaker nitrogen tint2 pnmixer xscreensaver gmrun lxrandr
+$ yaourt -S openbox obmenu obkey obconf lxappearance slim slim-themes xorg-xev menumaker nitrogen tint2 pnmixer xscreensaver gmrun lxrandr plank 
 ```
 
 To generate menu in desktop: 
@@ -30,9 +28,32 @@ To generate menu in desktop:
 $ menumaker - mmaker -vf OpenBox3
 ```
 
+Icons: flattr / faenza / elementary / moka
+
 
 ### Dev
-
 ```bash
-$ yaourt -S sublimetext python django biopython rstudio perl
+$ yaourt -S sublimetext geany python django biopython rstudio perl
+```
+
+### Programs
+```bash
+$ yaourt -S wps npm evince clipit thunar smplayer vlc megasync transmission mlocate xdiskusage scrot popcorntime 
+```
+
+To set default lenguaje in wps copy /opt/kingsoft/wps-office/office6/dicts/es_ES
+
+To see movies in one line terminal:
+```bash
+$ peerflix http://url-del-torrent.torrent --vlc -d
+```
+
+### Curiosidades
+```bash
+$ cal 12 2015
+$ cowsay
+$ asciiquarium
+$ oneko -tofocus -bg grey -fg black -tora
+$ telnet towel.blinkenlights.nl 666
+$ screenfetch
 ```
