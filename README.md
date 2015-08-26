@@ -1,5 +1,10 @@
 # Archlinux Configuration
 
+### Base
+```bash
+$ yaourt -S base base-devel samba htop tmux
+```
+
 ### Shell
 Terminal emulator
 ```bash
@@ -28,12 +33,13 @@ To generate menu in desktop:
 $ menumaker - mmaker -vf OpenBox3
 ```
 
+Theme: Numix theme
 Icons: flattr / faenza / elementary / moka
 
 
 ### Dev
 ```bash
-$ yaourt -S sublimetext geany python django biopython rstudio perl
+$ yaourt -S git sublimetext geany vim python django biopython rstudio perl
 ```
 
 ### Programs
@@ -47,6 +53,10 @@ To see movies in one line terminal:
 ```bash
 $ peerflix http://url-del-torrent.torrent --vlc -d
 ```
+
+### Utils
++ TLP Advanced Power Manager
+
 
 ### Curiosidades
 ```bash
