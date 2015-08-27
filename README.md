@@ -14,7 +14,7 @@ $ yaourt -S guake sakura konsole
 Fish shell
 ```bash
 $ yaourt -S fish # Install fish
-$ chsh -s /usr/bin/fish # Default fish
+$ chsh -s /usr/local/bin/fish # Default fish
 
 $ curl -L https://github.com/bpinto/oh-my-fish/raw/master/tools/install.fish | fish # Install oh-my-fish
 $ nano .config/fish/config.fish # Change theme to "agnoster"

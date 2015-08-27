@@ -71,7 +71,7 @@ $ git diff --cached # comando utilizado para archivos en el escenario.
 En Linux instalar *openssh*
 
 ## Git GUI
-gitg
++ gitg
 
 ## SublimeText plugins: :octocat:
 - Git
