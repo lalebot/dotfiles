@@ -1,6 +1,6 @@
 # Git cheats
 
-### Global setup
+### Configuracion global inicial
 
 ```bash
 $ git config --global user.name "Menganito"
@@ -8,6 +8,7 @@ $ git config --global user.email "menganito@fulanito.com"
 $ git config --global color.ui true
 $ git config --global color.status auto
 $ git config --global color.log auto
+$ git config --global core.editor "nano"
 
 $ git config --global credential.helper cache # cache de credenciales
 ```
@@ -20,28 +21,35 @@ $ git init # Crear un proyecto en Git de manera local
 $ git clone git@gitlab.com:lalebot/prom-pip.git # Crear un proyecto en Git de manera remota
 ```
 
+### Seguir archivos
 ```bash
 $ git status # Verificar el estado de Git
+$ git diff # Muestra exactamente que ha cambiado
+$ git diff --stat master otra-rama # Brinda más información sobre las diferencias entre ramas
+$ git diff --staged # Compara los cambios del estado actual con los últimos confirmados
 $ git add README.md #Agrego los cambios
+$ git rm --cached readme.txt # Elimino seguimiento del archivo pero lo mantengo el el repositorio local
 
 $ cat .gitignore # Crear un archivo que ignore archivos y editarlo:
 ```
 > *.[oa] # linea que ignora los archivos con extensión *.o* o *.a*
+> 
 > *~ # Ignora todos los archivos que terminan en tilde
+> 
 > test/ # Ignora la carpeta test
 
->> Lospatrones glob son expresiones regulares simplificadas que pueden ser usadas por las shells. Un asterisco (*) reconoce cero o más caracteres; [abc] reconoce cualquier carácter de los especificados entre corchetes (en este caso, a, b o c); una interrogación (?) reconoce un único carácter; y caracteres entre corchetes separados por un guión ([0-9]) reconoce cualquier carácter entre ellos (en este caso, de 0 a 9).
+>> Los patrones glob son expresiones regulares simplificadas que pueden ser usadas por las shells. Un asterisco (*) reconoce cero o más caracteres; [abc] reconoce cualquier carácter de los especificados entre corchetes (en este caso, a, b o c); una interrogación (?) reconoce un único carácter; y caracteres entre corchetes separados por un guión ([0-9]) reconoce cualquier carácter entre ellos (en este caso, de 0 a 9).
 
-
+### Confirmar cambios
 ```bash
-$ git commit -a -m "add README" #Subir los cambios 
-$ git push -u origin master #Enviar los cambios al servidor # git push [seudónimo] [ramificación] 
-$ git pull #Actualizar desde el servidor # Realiza un fetch más un merge
-$ git fetch origin # Obtener los cambios
+$ git commit -m "Comentarios del Commit" # Confirmo los cambios con un comentario
+$ git commit -a -m "Comentarios del Commit" # Realiza un "git add" confirmando el seguimiento de todos los archivos
 ```
 
 ```bash
-git diff --stat master otra-rama
+$ git push -u origin master #Enviar los cambios al servidor # git push [seudónimo] [ramificación] 
+$ git pull #Actualizar desde el servidor # Realiza un fetch más un merge
+$ git fetch origin # Obtener los cambios
 ```
 
 ### Ramas
@@ -68,6 +76,10 @@ $ git config --global push.default simple # git push a la rama remota asociada
 $ git push origin HEAD:devel # Actualizar rama remota con distinto nombre desde la rama dv
 
 $ git branch -m nombre-rama nombre-rama-nueva # Renombrar rama local
+```
+
+```bash
+
 ```
 
 ```bash
