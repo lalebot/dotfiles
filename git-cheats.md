@@ -32,7 +32,7 @@ $ git rm --cached readme.txt # Elimino seguimiento del archivo pero lo mantengo 
 
 $ cat .gitignore # Crear un archivo que ignore archivos y editarlo:
 ```
-> *.[oa] # linea que ignora los archivos con extensión *.o* o *.a*
+> *.[oa] # linea que ignora los archivos con extensión .o o .a
 > 
 > *~ # Ignora todos los archivos que terminan en tilde
 > 
@@ -46,13 +46,24 @@ $ git commit -m "Comentarios del Commit" # Confirmo los cambios con un comentari
 $ git commit -a -m "Comentarios del Commit" # Realiza un "git add" confirmando el seguimiento de todos los archivos
 ```
 
+### Log
+```bash
+$ git log --pretty=format:"%h - %an, %ar : %s" --graph --since=2.weeks
+```
+
+### Deshacer cambios
+```bash
+$ $ git checkout -- archivo.md # Revierte el archivo a su último estado confirmado
+```
+
+### Repositorios remotos
 ```bash
 $ git push -u origin master #Enviar los cambios al servidor # git push [seudónimo] [ramificación] 
 $ git pull #Actualizar desde el servidor # Realiza un fetch más un merge
 $ git fetch origin # Obtener los cambios
 ```
 
-### Ramas
+## Ramas
 ```bash
 $ git checkout -b primera-rama # Crear una rama
 $ git checkout master
@@ -95,11 +106,11 @@ $ git diff --cached # comando utilizado para archivos en el escenario.
 ```
 
 ## Agregar el key ssh seguro
-
 En Linux instalar *openssh*
 
 ## Git GUI
 + gitg
++ gitk
 
 ## SublimeText plugins: :octocat:
 - Git
