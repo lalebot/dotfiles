@@ -1,10 +1,10 @@
 # Git cheats
 
-## Git global setup
+### Global setup
 
 ```bash
-$ git config --global user.name "Ale"
-$ git config --global user.email "mail@dominio.com"
+$ git config --global user.name "Menganito"
+$ git config --global user.email "menganito@fulanito.com"
 $ git config --global color.ui true
 $ git config --global color.status auto
 $ git config --global color.log auto
@@ -12,10 +12,26 @@ $ git config --global color.log auto
 $ git config --global credential.helper cache # cache de credenciales
 ```
 
+![Ciclo de vida de los archivos](http://git-scm.com/figures/18333fig0201-tn.png "Ciclo de vida de los archivos")
+
+### Iniciar proyecto
 ```bash
-$ git clone git@gitlab.com:lalebot/prom-pip.git
-$ git add README.md #Agrego los cambios
+$ git init # Crear un proyecto en Git de manera local
+$ git clone git@gitlab.com:lalebot/prom-pip.git # Crear un proyecto en Git de manera remota
 ```
+
+```bash
+$ git status # Verificar el estado de Git
+$ git add README.md #Agrego los cambios
+
+$ cat .gitignore # Crear un archivo que ignore archivos y editarlo:
+```
+> *.[oa] # linea que ignora los archivos con extensión *.o* o *.a*
+> *~ # Ignora todos los archivos que terminan en tilde
+> test/ # Ignora la carpeta test
+
+>> Lospatrones glob son expresiones regulares simplificadas que pueden ser usadas por las shells. Un asterisco (*) reconoce cero o más caracteres; [abc] reconoce cualquier carácter de los especificados entre corchetes (en este caso, a, b o c); una interrogación (?) reconoce un único carácter; y caracteres entre corchetes separados por un guión ([0-9]) reconoce cualquier carácter entre ellos (en este caso, de 0 a 9).
+
 
 ```bash
 $ git commit -a -m "add README" #Subir los cambios 
