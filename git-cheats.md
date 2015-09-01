@@ -72,6 +72,12 @@ $ git remote rename pb paul
 $ git remote rm paul
 ```
 
+## Versiones
+```bash
+$ git tag -a v1.4 -m 'my version 1.4'
+$ git push origin v1.5 # Las etiquetas tienen que ser enviadas luego de creadas.
+```
+
 ## Ramas
 ```bash
 $ git branch # Ver ramas
