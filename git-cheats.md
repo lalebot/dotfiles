@@ -78,6 +78,14 @@ $ git tag -a v1.4 -m 'my version 1.4'
 $ git push origin v1.5 # Las etiquetas tienen que ser enviadas luego de creadas.
 ```
 
+## Alias
+```bash
+$ git config --global alias.ck checkout
+$ git config --global alias.br branch
+$ git config --global alias.cm commit
+$ git config --global alias.st status
+```
+
 ## Ramas
 ```bash
 $ git branch # Ver ramas
