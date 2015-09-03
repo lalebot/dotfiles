@@ -1,6 +1,6 @@
 # Git cheats
 
-### Configuracion global inicial
+## Configuracion global inicial
 
 ```bash
 $ git config --global user.name "Menganito"
@@ -16,7 +16,7 @@ $ git config --global credential.helper cache # cache de credenciales
 
 ![Ciclo de vida de los archivos](http://git-scm.com/figures/18333fig0201-tn.png "Ciclo de vida de los archivos")
 
-### Iniciar proyecto
+## Iniciar proyecto
 ```bash
 $ git init # Crear un proyecto en Git de manera local
 $ git clone git@gitlab.com:lalebot/prom-pip.git # Crear un proyecto en Git de manera remota
@@ -72,13 +72,13 @@ $ git remote rename pb paul
 $ git remote rm paul
 ```
 
-## Versiones
+### Versiones
 ```bash
 $ git tag -a v1.4 -m 'my version 1.4'
 $ git push origin v1.5 # Las etiquetas tienen que ser enviadas luego de creadas.
 ```
 
-## Alias
+### Alias
 ```bash
 $ git config --global alias.ck checkout
 $ git config --global alias.br branch
@@ -91,11 +91,18 @@ $ git config --global alias.st status
 $ git branch # Ver ramas
 $ git checkout -b primera-rama # Crear una rama
 $ git checkout master
-$ git branch -d segunda-rama # Eliminar Rama
+$ git merge iss43 # Merge de la rama iss43 estando en la rama master
+$ git mergetool # En el caso de que se generen conflictos y queramos resolverlos visualmente.
+$ git branch -d segunda-rama # Eliminar Rama, con -D se fuerza el borrado
+
 $ git branch --merged # Ver solo ramas fusionadas
+$ git branch --no-merged 
+```
 
+### Ramas Remotas
+```bash
 $ git push (remoto) (rama) #Publicar rama para compartirla
-
+$ git branch -m devel dv # Renombrar rama local
 $ git checkout --track origin/arreglos-varios # Seguimiento de ramas remotas con mismo nombre
 $ git checkout -b serverfix origin/serverfix # Origin es en el remoto
 $ git checkout -b a-v origin/arreglos-varios # Crear una rama a-v que esta vinculada con la rama remota arreglos-varios
@@ -108,12 +115,6 @@ $ git push origin :rama-remota # Eliminar rama remota
 $ git config --global push.default matching # git push mismo nombre remoto
 $ git config --global push.default simple # git push a la rama remota asociada
 $ git push origin HEAD:devel # Actualizar rama remota con distinto nombre desde la rama dv
-
-$ git branch -m nombre-rama nombre-rama-nueva # Renombrar rama local
-```
-
-```bash
-
 ```
 
 ```bash
