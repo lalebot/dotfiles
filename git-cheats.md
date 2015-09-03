@@ -28,6 +28,7 @@ $ git status # Verificar el estado de Git
 $ git diff # Muestra exactamente que ha cambiado
 $ git diff --stat master otra-rama # Brinda más información sobre las diferencias entre ramas
 $ git diff --staged # Compara los cambios del estado actual con los últimos confirmados
+$ git diff --cached # comando utilizado para archivos en el escenario.
 $ git add README.md #Agrego los cambios
 $ git rm --cached readme.txt # Elimino seguimiento del archivo pero lo mantengo el el repositorio local
 
@@ -58,7 +59,7 @@ $ git log --pretty=format:"%h - %an, %ar : %s" --graph --since=2.weeks
 
 ### Deshacer cambios
 ```bash
-$ $ git checkout -- archivo.md # Revierte el archivo a su último estado confirmado
+$ git checkout -- archivo.md # Revierte el archivo a su último estado confirmado
 ```
 
 ### Repositorios remotos
@@ -114,19 +115,13 @@ $ git push origin :rama-remota # Eliminar rama remota
 
 $ git config --global push.default matching # git push mismo nombre remoto
 $ git config --global push.default simple # git push a la rama remota asociada
+
 $ git push origin HEAD:devel # Actualizar rama remota con distinto nombre desde la rama dv
 ```
 
 ```bash
-$ git tag v0.1 # Guarda el estado en un tag
 $ git stash # Guarda un estado incompleto
 $ git stash pop # Restarurarlos luego de cambiar de rama
-```
-
-```bash
-$ git clone https://github.com/lalebot/tutorial-git.git # Clonación del repositorio.
-$ git status # Averiguar como andamos
-$ git diff --cached # comando utilizado para archivos en el escenario.
 ```
 
 ## Agregar el key ssh seguro
