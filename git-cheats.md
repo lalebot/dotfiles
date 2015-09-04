@@ -95,28 +95,27 @@ $ git checkout master
 $ git merge iss43 # Merge de la rama iss43 estando en la rama master
 $ git mergetool # En el caso de que se generen conflictos y queramos resolverlos visualmente.
 $ git branch -d segunda-rama # Eliminar Rama, con -D se fuerza el borrado
-
+$ git branch -m devel dv # Renombrar rama local
 $ git branch --merged # Ver solo ramas fusionadas
 $ git branch --no-merged 
 ```
 
 ### Ramas Remotas
 ```bash
-$ git push (remoto) (rama) #Publicar rama para compartirla
-$ git branch -m devel dv # Renombrar rama local
-$ git checkout --track origin/arreglos-varios # Seguimiento de ramas remotas con mismo nombre
-$ git checkout -b serverfix origin/serverfix # Origin es en el remoto
+$ git fetch # Traer los cambios desde el servidor
+$ git push (remoto) (rama-local) # Publicar rama para compartirla
+$ git push origin serverfix:awesomebranch # Para llevar tu rama serverfix local a la rama awesomebranch en el proyecto remoto
 $ git checkout -b a-v origin/arreglos-varios # Crear una rama a-v que esta vinculada con la rama remota arreglos-varios
-$ git branch -u origin/ramaremota # Asociar rama local para que haga seguimiento de la rama remota.
+$ git checkout --track origin/arreglos-varios # Seguimiento de ramas remotas con mismo nombre
+$ git branch -u origin/ramaremota # Asociar rama local para que haga seguimiento de la ramaremota
 $ git branch -vv # Ver que ramas siguen a cual en el servidor remoto
+$ git push origin HEAD:devel # Actualizar rama remota con distinto nombre desde la rama dv
 
 $ git push origin --delete rama-remota # Eliminar rama remota
 $ git push origin :rama-remota # Eliminar rama remota
 
 $ git config --global push.default matching # git push mismo nombre remoto
 $ git config --global push.default simple # git push a la rama remota asociada
-
-$ git push origin HEAD:devel # Actualizar rama remota con distinto nombre desde la rama dv
 ```
 
 ```bash
@@ -124,8 +123,10 @@ $ git stash # Guarda un estado incompleto
 $ git stash pop # Restarurarlos luego de cambiar de rama
 ```
 
+---
 ## Agregar el key ssh seguro
 En Linux instalar *openssh*
+[Ver más](http://git-scm.com/book/es/v1/Git-en-un-servidor-Generando-tu-clave-p%C3%BAblica-SSH)
 
 ## Git GUI
 + gitg
