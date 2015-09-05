@@ -68,7 +68,7 @@ $ git push -u origin master #Enviar los cambios al servidor # git push [seudóni
 $ git pull #Actualizar desde el servidor # Realiza un fetch más un merge
 $ git fetch origin # Obtener los cambios
 
-$ git remote add pb git://github.com/paulboone/ticgit.git # Agregar repositorio remoto al proyecto con nombre local pb.
+$ git remote add pb git://github.com/paul/ticgit.git # Agregar repositorio remoto al proyecto con nombre local pb.
 $ git remote -v # Ver ramas remotas 
 $ git remote rename pb paul
 $ git remote rm paul # Eliminar rama remota
