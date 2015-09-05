@@ -22,6 +22,12 @@ $ git init # Crear un proyecto en Git de manera local
 $ git clone git@gitlab.com:lalebot/prom-pip.git # Crear un proyecto en Git de manera remota
 ```
 
+### Archivos
+```bash
+$ git mv tp-perl.md /d/Git/pip-prom-tom/perl/tp-perl.md # Mover o renombrar un archivo.
+$ git rm archiv.md # Eliminar un archivo.
+```
+
 ### Seguir archivos
 ```bash
 $ git status # Verificar el estado de Git
