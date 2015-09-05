@@ -69,8 +69,9 @@ $ git pull #Actualizar desde el servidor # Realiza un fetch más un merge
 $ git fetch origin # Obtener los cambios
 
 $ git remote add pb git://github.com/paulboone/ticgit.git # Agregar repositorio remoto al proyecto con nombre local pb.
+$ git remote -v # Ver ramas remotas 
 $ git remote rename pb paul
-$ git remote rm paul
+$ git remote rm paul # Eliminar rama remota
 ```
 
 ### Versiones
