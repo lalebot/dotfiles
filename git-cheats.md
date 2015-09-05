@@ -125,8 +125,9 @@ $ git stash pop # Restarurarlos luego de cambiar de rama
 
 ---
 ## Agregar el key ssh seguro
-En Linux instalar *openssh*
-[Ver más](http://git-scm.com/book/es/v1/Git-en-un-servidor-Generando-tu-clave-p%C3%BAblica-SSH)
++ En Linux instalar *openssh* [Ver más](http://git-scm.com/book/es/v1/Git-en-un-servidor-Generando-tu-clave-p%C3%BAblica-SSH)
++ En Windows a través del Git GUI
+
 
 ## Git GUI
 + gitg
