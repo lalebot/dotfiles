@@ -39,7 +39,7 @@ Icons: flattr / faenza / elementary / moka
 
 ### Dev
 ```bash
-$ yaourt -S git sublimetext geany vim python django biopython rstudio perl
+$ yaourt -S git sublimetext geany vim python django biopython rstudio perl npm
 ```
 
 ### Programs
