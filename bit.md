@@ -1,6 +1,8 @@
-# Vim :S
-+ Convincaion teclas unix
-+ Programa kmon para ver en la pantalla lo que se esta pulsando 
+# Investigar
+
++ Git + github + blog + markdown = jekill
+
+
 + Usar los comandos de Linux en Windows: unix-utils.exe
 
 + http://hipertextual.com/2015/02/como-usar-vim
