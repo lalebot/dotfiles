@@ -1,7 +1,7 @@
 # Vim :S
 + Convincaion teclas unix
 + Programa kmon para ver en la pantalla lo que se esta pulsando 
-+ 
++ Usar los comandos de Linux en Windows: unix-utils.exe
 
   Modo comando
 i Modo inserción
@@ -15,7 +15,6 @@ b Me muevo palabra atras
 
 x borra el caracter sobre el que estas encima
 
-Portapapeles de Vim: 
 p pega el portapapeles
 P pega antes del lugar 
 r remplazar el caracter sobre el que estas
