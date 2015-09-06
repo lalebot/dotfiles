@@ -3,7 +3,10 @@
 + Programa kmon para ver en la pantalla lo que se esta pulsando 
 + Usar los comandos de Linux en Windows: unix-utils.exe
 
-  Modo comando
++ http://hipertextual.com/2015/02/como-usar-vim
++ http://voylinux.com/asi-que-quieres-aprender-usar-vim/
+
+Modo comando
 i Modo inserción
 :w Guardar
 :o abrir un archivo
