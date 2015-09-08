@@ -120,6 +120,7 @@ $ git push origin HEAD:devel # Actualizar rama remota con distinto nombre desde 
 
 $ git push origin --delete rama-remota # Eliminar rama remota
 $ git push origin :rama-remota # Eliminar rama remota
+$ git push --set-upstream origin sf # Vincular la rama actual con la sf
 
 $ git config --global push.default matching # git push mismo nombre remoto
 $ git config --global push.default simple # git push a la rama remota asociada

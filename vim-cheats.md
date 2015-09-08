@@ -5,6 +5,7 @@
 
 + http://hipertextual.com/2015/02/como-usar-vim
 + http://voylinux.com/asi-que-quieres-aprender-usar-vim/
++ http://vim.rtorr.com/lang/es_es/
 
 Modo comando
 i Modo inserción
