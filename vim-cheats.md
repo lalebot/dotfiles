@@ -22,7 +22,8 @@ x borra el caracter sobre el que estas encima
 p pega el portapapeles
 P pega antes del lugar 
 r remplazar el caracter sobre el que estas
-f buscar un caracter en la linea (hola)
+f search un caracter en la linea (hola)
 a Comienzo a editar despues del caracter
 
- 
+d borrar mas otra letra que diga que borra 
+cf. Cambiar hasta el punto
