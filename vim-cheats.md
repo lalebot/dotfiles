@@ -1,4 +1,4 @@
-# Vim :S
+# Vim
 + Convincaion teclas unix
 + Programa kmon para ver en la pantalla lo que se esta pulsando 
 + Usar los comandos de Linux en Windows: unix-utils.exe
@@ -7,7 +7,7 @@
 + http://voylinux.com/asi-que-quieres-aprender-usar-vim/
 + http://vim.rtorr.com/lang/es_es/
 
-Modo comando
+-- Modo comando
 i Modo inserción
 :w Guardar
 :o abrir un archivo
