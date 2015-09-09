@@ -20,6 +20,7 @@ $ curl -L https://github.com/bpinto/oh-my-fish/raw/master/tools/install.fish | f
 $ nano .config/fish/config.fish # Change theme to "agnoster"
 
 # Downloada Powerline font & install: www.github.com/powerline/powerline
+# En Arch: https://aur.archlinux.org/packages/python-powerline-git/
 ```
 
 
