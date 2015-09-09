@@ -1,10 +1,11 @@
-# Vim
-+ Convincaion teclas unix
+# Vim Vim
++ Convincion teclas unix
 + Programa kmon para ver en la pantalla lo que se esta pulsando 
 + Usar los comandos de Linux en Windows: unix-utils.exe
 
 + http://hipertextual.com/2015/02/como-usar-vim
 + http://voylinux.com/asi-que-quieres-aprender-usar-vim/
++ http://derekwyatt.org/vim/tutorials/novice/ 
 + http://vim.rtorr.com/lang/es_es/
 
 -- Modo comando
@@ -24,6 +25,33 @@ P pega antes del lugar
 r remplazar el caracter sobre el que estas
 f search un caracter en la linea (hola)
 a Comienzo a editar despues del caracter
+A comienzo a editar al fin de la linea
+I comienzo a editar al inicio
+D borrar hasta la final de la linea
+C cambiar hasta el final de la linea
 
 d borrar mas otra letra que diga que borra 
 cf. Cambiar hasta el punto
+dd cambia toda la linea
+cc cambia toda la linea
+y copiar
+o inserta una linea vacia debajo
+
+. hace lo ultimo que hicimos
+//
+
+% voy al otro par de la llave (espejo)
+Macros !!!!
+
+kkjj
+
+(jasldñfkjasñkdfj ñalksjd (jfaksdfjkasdjflkajsdlkfjasdlkfjasldk)
+sñkjdfkajs ñkasjdf kjas ñkajsdk fjasñkdj f
+dfasjf ñklajsdñ ñka ksdfj ñkajsd ñksdjf kjasdf kj
+
+
+
+
+
+
+
