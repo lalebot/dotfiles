@@ -8,6 +8,8 @@
 + http://derekwyatt.org/vim/tutorials/novice/ 
 + http://vim.rtorr.com/lang/es_es/
 
+Vundle -> To install from command line: vim +PluginInstall +qall
+
 -- Modo comando
 i Modo inserción
 :w Guardar

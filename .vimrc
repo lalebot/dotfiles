@@ -5,7 +5,6 @@ filetype off                  " required
 set rtp+=~/.vim/bundle/Vundle.vim
 
 call vundle#begin()
-"call vundle#begin('~/some/path/here')
 
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
@@ -52,9 +51,9 @@ Plugin 'gorodinskiy/vim-coloresque'   " color highlight
 Plugin 'majutsushi/tagbar'            " tags plugin
 Plugin 'Shougo/neocomplcache.vim'     " autocompletado
 
-
 call vundle#end()            " required
 filetype plugin indent on    " required
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 "autocmd vimenter * NERDTree
 
@@ -68,8 +67,6 @@ if has("gui_running")
     colorscheme solarized
     set background=dark
     let g:airline_theme = "solarized"
-    " colorscheme bubblegum-256-dark
-    " let g:airline_theme = "bubblegum"
     set guifont=Droid\ Sans\ Mono\ for\ Powerline\ 10
 else
     colorscheme bubblegum-256-dark
@@ -81,16 +78,15 @@ if has("autocmd")
   au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 endif
 
-if has("autocmd")
-  filetype plugin indent on
-endif
+"if has("autocmd")
+"  filetype plugin indent on
+"endif
 
 set showcmd    " Show (partial) command in status line.
 set showmatch     " Show matching brackets.
 set ignorecase    " Do case insensitive matching
 set smartcase     " Do smart case matchiny
 set incsearch     " Incremental search
-"set autowrite    " Automatically save before commands like :next and :make
 set hidden     " Hide buffers when they are abandoned
 set mouse=a    " Enable mouse usage (all modes)
 set smartindent " auto tab

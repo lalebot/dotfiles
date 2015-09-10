@@ -5,6 +5,7 @@
  ✔ pandoc
  ✔ Git
  ✔ GitGutter
+ ✔ Viml
 
  ✔ SublimeREPL @done (15-06-16 07:00)
  ✔ BracketHighlighter @done (15-06-15 09:03)
