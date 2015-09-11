@@ -70,14 +70,16 @@ $ git checkout -- archivo.md # Revierte el archivo a su último estado confirmad
 
 ### Repositorios remotos
 ```bash
+$ git remote -v # Mostrar los reposotorios remotos
 $ git push -u origin master #Enviar los cambios al servidor # git push [seudónimo] [ramificación] 
 $ git pull #Actualizar desde el servidor # Realiza un fetch más un merge
-$ git fetch origin # Obtener los cambios
 
 $ git remote add pb git://github.com/paul/ticgit.git # Agregar repositorio remoto al proyecto con nombre local pb.
-$ git remote -v # Ver ramas remotas 
 $ git remote rename pb paul
 $ git remote rm paul # Eliminar rama remota
+
+$ git fetch [repo-remoto] # traer datos del repo remoto
+$ git remote show [repo-remoto] # Mostrando repositorio remoto
 ```
 
 ### Versiones
@@ -129,6 +131,10 @@ $ git config --global push.default simple # git push a la rama remota asociada
 ```bash
 $ git stash # Guarda un estado incompleto
 $ git stash pop # Restarurarlos luego de cambiar de rama
+```
+
+```bash
+$ git diff --check # revisar problemas de espaciado
 ```
 
 ---
