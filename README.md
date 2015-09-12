@@ -8,7 +8,7 @@ $ yaourt -S base base-devel samba htop tmux
 ### Shell
 Terminal emulator
 ```bash
-$ yaourt -S guake sakura konsole
+$ yaourt -S tilda sakura konsole
 ```
 
 Fish shell

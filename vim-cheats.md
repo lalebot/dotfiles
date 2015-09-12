@@ -31,22 +31,32 @@ A comienzo a editar al fin de la linea
 I comienzo a editar al inicio
 D borrar hasta la final de la linea
 C cambiar hasta el final de la linea
-
+s Sustituir es como un x y un i
+S sustituir la linea
 d borrar mas otra letra que diga que borra 
 cf. Cambiar hasta el punto
 dd cambia toda la linea
 cc cambia toda la linea
 y copiar
 o inserta una linea vacia debajo
+dl borrar un caracter de la izquierda
 
-. hace lo ultimo que hicimos
-//
-
+. hace lo último que hicimos
+numero mas comando y se lo repite
+10 i =  Esc ==================== 
 % voy al otro par de la llave (espejo)
 Macros !!!!
 
-kkjj
+/ Buscar n navegar adelante N navega adelante
+? Busco para atras
+* busco automaticamente la palabra que estoy encima
 
+
+
+
+
+(jasldñfkjasñkdfj ñalksjd (jfaksdfjkasdjflkajsdlkfjasdlkfjasldk)
+(jasldñfkjasñkdfj ñalksjd (jfaksdfjkasdjflkajsdlkfjasdlkfjasldk)
 (jasldñfkjasñkdfj ñalksjd (jfaksdfjkasdjflkajsdlkfjasdlkfjasldk)
 sñkjdfkajs ñkasjdf kjas ñkajsdk fjasñkdj f
 dfasjf ñklajsdñ ñka ksdfj ñkajsd ñksdjf kjasdf kj

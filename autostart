@@ -3,8 +3,8 @@
 setxkbmap es
 
 (sleep 0s && sh $HOME/Mega/Linux/monitor.sh) &
-#(sleep 0s && guake) &
 
+(sleep 1s && tilda) &
 (sleep 1s && nitrogen --set-zoom-fill /home/lale/Mega/Wall/beam_me_up_scotty_by_imaginism.jpg) &
 (sleep 1s && tint2) &
 
