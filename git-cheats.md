@@ -86,6 +86,7 @@ $ git remote show [repo-remoto] # Mostrando repositorio remoto
 ```bash
 $ git tag -a v1.4 -m 'my version 1.4'
 $ git push origin v1.5 # Las etiquetas tienen que ser enviadas luego de creadas.
+$ git push --tags # Envia todos los tags
 ```
 
 ### Alias
