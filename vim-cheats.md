@@ -51,19 +51,17 @@ Macros !!!!
 ? Busco para atras
 * busco automaticamente la palabra que estoy encima
 
+ci" Cambio lo que esta entre las comillas
+shift V selecciono + y copio
+$ final de la linea
+
+comienzo a escribit aprieto ctrl p (atrás) ctrl n (adelante) busqueda de antes y autocompleta
 
 
+:%s/algo/alga/g reemplazar
+Puedo marcar y luego reemplazar en esa zona
 
+identar =
+< identar +/-
 
-(jasldñfkjasñkdfj ñalksjd (jfaksdfjkasdjflkajsdlkfjasdlkfjasldk)
-(jasldñfkjasñkdfj ñalksjd (jfaksdfjkasdjflkajsdlkfjasdlkfjasldk)
-(jasldñfkjasñkdfj ñalksjd (jfaksdfjkasdjflkajsdlkfjasdlkfjasldk)
-sñkjdfkajs ñkasjdf kjas ñkajsdk fjasñkdj f
-dfasjf ñklajsdñ ñka ksdfj ñkajsd ñksdjf kjasdf kj
-
-
-
-
-
-
-
+gg al principio uv selecciono G final

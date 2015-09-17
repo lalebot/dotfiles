@@ -148,6 +148,9 @@ $ git diff --check # revisar problemas de espaciado
 + gitg
 + gitk
 
+## Git timeline gráfica
++ gource
+
 ## SublimeText plugins: :octocat:
 - Git
 - GitGutter
