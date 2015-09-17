@@ -11,13 +11,13 @@
 Vundle -> To install from command line: vim +PluginInstall +qall
 
 -- Modo comando
-i Modo inserci髇
+i Modo inserci贸n
 :w Guardar
 :o abrir un archivo
-u deshacer lo 鷏timo que hice
+u deshacer lo 煤ltimo que hice
 
-e Me muevo al final de la pr髕ima palabra
-w Me muevo a la pr髕ima palabra
+e Me muevo al final de la pr贸xima palabra
+w Me muevo a la pr贸xima palabra
 b Me muevo palabra atras
 
 x borra el caracter sobre el que estas encima
@@ -41,7 +41,7 @@ y copiar
 o inserta una linea vacia debajo
 dl borrar un caracter de la izquierda
 
-. hace lo 鷏timo que hicimos
+. hace lo 煤ltimo que hicimos
 numero mas comando y se lo repite
 10 i =  Esc ==================== 
 % voy al otro par de la llave (espejo)
@@ -55,7 +55,7 @@ ci" Cambio lo que esta entre las comillas
 shift V selecciono + y copio
 $ final de la linea
 
-comienzo a escribit aprieto ctrl p (atr醩) ctrl n (adelante) busqueda de antes y autocompleta
+comienzo a escribit aprieto ctrl p (atr谩s) ctrl n (adelante) busqueda de antes y autocompleta
 
 
 :%s/algo/alga/g reemplazar
@@ -68,8 +68,17 @@ gg al principio uv selecciono G final
 
 :! comando unix
 
-Se puede seleccionar y luego ! y poner un comando unix para que se ejecute en esa selecci髇.
+Se puede seleccionar y luego ! y poner un comando unix para que se ejecute en esa selecci贸n.
 
 q (letra) grabo macro q
 @ (letra) se ejecuta el macro 
 @@ se ejecuta la ultima macro
+
+ctrl W me muevo con NERDtree
+
+:split  divido verticalemten
+:vsplit divido horizontalmente
+
+vimdiff dp aceptar los cambios que se ven
+
+c-t plugin para moverse buffer 驴?   
