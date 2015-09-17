@@ -65,3 +65,11 @@ identar =
 < identar +/-
 
 gg al principio uv selecciono G final
+
+:! comando unix
+
+Se puede seleccionar y luego ! y poner un comando unix para que se ejecute en esa selección.
+
+q (letra) grabo macro q
+@ (letra) se ejecuta el macro 
+@@ se ejecuta la ultima macro
