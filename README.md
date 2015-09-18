@@ -26,7 +26,7 @@ $ yaourt -S tilda sakura konsole
 Fish shell
 ```bash
 $ yaourt -S fish # Install fish
-$ chsh -s /usr/local/bin/fish # Default fish
+$ chsh -s /usr/bin/fish # Default fish
 
 $ curl -L github.com/oh-my-fish/oh-my-fish/raw/master/bin/install | sh # Install oh-my-fish
 $ omf theme agnoster
@@ -53,7 +53,7 @@ Icons: ultra-flattr / faenza / elementary / moka
 
 ### Dev
 ```bash
-$ yaourt -S vim git sublimetext geany python perl
+$ yaourt -S vim git sublimetext geany python perl godot
 ```
 
 ### Programs
