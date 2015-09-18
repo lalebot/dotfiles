@@ -143,6 +143,13 @@ $ git diff --check # revisar problemas de espaciado
 + En Linux instalar *openssh* [Ver más](http://git-scm.com/book/es/v1/Git-en-un-servidor-Generando-tu-clave-p%C3%BAblica-SSH)
 + En Windows a través del Git GUI
 
+```bash
+$ ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+$ eval "$(ssh-agent -s)"
+$ ssh-add ~/.ssh/id_rsa
+$ xclip -sel clip < ~/.ssh/id_rsa.pub
+```
+
 
 ## Git GUI
 + gitg
