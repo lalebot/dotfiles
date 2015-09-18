@@ -1,9 +1,21 @@
 # Archlinux Configuration
 
 ### Base
+add **/etc/pacman.conf**
+```
+[archlinuxfr]
+SigLevel = Never
+Server = http://repo.archlinux.fr/$arch
+```
+
+```bash
+$ sudo pacman -S yaourt
+```
+
 ```bash
 $ yaourt -S base base-devel samba htop tmux
 ```
+
 
 ### Shell
 Terminal emulator
@@ -16,36 +28,35 @@ Fish shell
 $ yaourt -S fish # Install fish
 $ chsh -s /usr/local/bin/fish # Default fish
 
-$ curl -L https://github.com/bpinto/oh-my-fish/raw/master/tools/install.fish | fish # Install oh-my-fish
-$ nano .config/fish/config.fish # Change theme to "agnoster"
+$ curl -L github.com/oh-my-fish/oh-my-fish/raw/master/bin/install | sh # Install oh-my-fish
+$ omf theme agnoster
 
-# Downloada Powerline font & install: www.github.com/powerline/powerline
-# En Arch: https://aur.archlinux.org/packages/python-powerline-git/
+$ yaourt -S python-powerline-git
 ```
 
 
 ### Openbox
 ```bash
-$ yaourt -S openbox obmenu obkey obconf lxappearance slim slim-themes xorg-xev menumaker nitrogen tint2 pnmixer xscreensaver gmrun lxrandr plank 
+$ yaourt -S openbox obmenu obkey obconf lxappearance slim slim-themes xorg-xev menumaker nitrogen tint2 pnmixer xscreensaver gmrun lxrandr plank
 ```
 
-To generate menu in desktop: 
+Generate menu in desktop: 
 ```bash
 $ menumaker - mmaker -vf OpenBox3
 ```
 
 Theme: Numix theme
-Icons: flattr / faenza / elementary / moka
+Icons: ultra-flattr / faenza / elementary / moka
 
 
 ### Dev
 ```bash
-$ yaourt -S git sublimetext geany vim python django biopython rstudio perl npm
+$ yaourt -S vim git sublimetext geany python perl
 ```
 
 ### Programs
 ```bash
-$ yaourt -S wps npm evince clipit thunar smplayer vlc megasync transmission mlocate xdiskusage firefox chromium scrot popcorntime
+$ yaourt -S wps npm evince clipit thunar smplayer vlc megasync transmission mlocate xdiskusage firefox chromium scrot popcorntime xclip
 ```
 
 To set default lenguaje in wps copy /opt/kingsoft/wps-office/office6/dicts/es_ES
