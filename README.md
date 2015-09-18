@@ -47,8 +47,8 @@ Generate menu in desktop:
 $ menumaker - mmaker -vf OpenBox3
 ```
 
-Theme: Numix theme
-Icons: ultra-flattr / faenza / elementary / moka
+Theme: Numix theme - Numix solarized
+Icons: ultra-flattr - moka - uniform - dalisha - numix
 
 
 ### Dev
