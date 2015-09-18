@@ -6,7 +6,6 @@
 	"installed_packages":
 	[
 		"AdvancedNewFile",
-		"Aprosopo",
 		"ASCII Decorator",
 		"BracketHighlighter",
 		"Git",
@@ -17,11 +16,8 @@
 		"Monokai - Spacegray",
 		"Package Control",
 		"Pandoc",
-		"pandoc",
 		"Predawn",
 		"SideBarEnhancements",
-		"SpaceGray",
-		"Sublime Linter",
 		"SublimeLinter",
 		"SublimeLinter-pep8",
 		"SublimeREPL",
@@ -29,7 +25,6 @@
 		"Terminal",
 		"Theme - Aprosopo",
 		"Theme - Spacegray",
-		"VimL",
-		"Viml"
+		"VimL"
 	]
 }

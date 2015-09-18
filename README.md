@@ -58,7 +58,7 @@ $ yaourt -S vim git sublimetext geany python perl godot
 
 ### Programs
 ```bash
-$ yaourt -S wps npm evince clipit thunar smplayer vlc megasync transmission mlocate xdiskusage firefox chromium scrot popcorntime xclip
+$ yaourt -S wps npm evince2-light clipit thunar smplayer vlc megasync transmission mlocate xdiskusage firefox chromium scrot popcorntime xclip
 ```
 
 To set default lenguaje in wps copy /opt/kingsoft/wps-office/office6/dicts/es_ES
