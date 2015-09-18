@@ -34,6 +34,8 @@ $ omf theme agnoster
 $ yaourt -S python-powerline-git
 ```
 
+https://github.com/powerline/fonts
+
 
 ### Openbox
 ```bash
