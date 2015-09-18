@@ -22,7 +22,7 @@ setxkbmap es
 
 #(sleep 10s && xscreensaver -no-splash) &
 
-(sleep 30s && sh $HOME/Mega/Linux/conky/conky-startup.sh) &
+(sleep 30s && sh $HOME/git/dotfiles/conky/conky-startup.sh) &
 
 #(sleep 15s && oneko -tofocus -bg mintcream -fg black) &
 #(sleep 30s && megasync) &
