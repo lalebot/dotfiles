@@ -83,10 +83,30 @@ $ última línea del archivo..
 0 línea encima de la primera (no existe la línea 0), se usa para mover o pegar texto encima de la primera línea..
 . el punto, es la línea donde está ubicado nuestro cursor..
 % todo el archivo, un atajo upara el rango :1,$..
+
 :5,10p muestra lo que hay de la linea 5 a la 10.
 :'<,'>norm . ejecutar la ultima accion en modo normal de la visualizacion .
-.
+:.m0 mover la línea en la que estamos al principio del archivo.
+:4t9 copiar la línea 4 debajo de la línea 9.
+:%s/Madrid/Bilbao reemplaza Madrid por Bilbao en todo el archivo.
+:shell nos lleva a nuestra shell para ejecutar comandos, al ejecutar exit volveremos a Vim.
+:![comando de shell] nos permite ejecutar comandos de nuestra shell como :!ls.
+@: repetir el ultimo comando, se ejecuta en modo normal.
 
+
+### Buffers
+
+:ls nos muestra una lista de los buffers
+:bn[ext] podemos escribir :bn o :bnext para que se ejecute este comando.
+:bp[revious] abre el buffer anterior.
+:bf[irst] abre el primer buffer de la lista.
+:bl[ast] abre el último buffer de la lista.
+:bd[elete] [buffer] eliminar buffer de la lista, no elimina el archivo del disco.
+:args muestra la lista de argumentos
+:argdo [comando] nos permite realizar un comando en todos los archivos de la lista a la vez.
+:w[rite]a[all] guarda todos los archivos.
+:q[uit]a[all] sale de todos los archivos.
+										
 ##############################################################
 
 :w Guardar

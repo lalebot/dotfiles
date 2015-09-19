@@ -1,6 +1,7 @@
 # ArchBang autostart #
 
 setxkbmap es
+# setxkbmap latam
 
 (sleep 0s && sh $HOME/Mega/Linux/monitor.sh) &
 
