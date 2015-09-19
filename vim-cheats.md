@@ -10,6 +10,10 @@
 
 Vundle -> To install from command line: vim +PluginInstall +qall
 
+```bash
+$ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+```
+
 -- Modo comando
 i Modo inserción
 :w Guardar
@@ -82,3 +86,18 @@ ctrl W me muevo con NERDtree
 vimdiff dp aceptar los cambios que se ven
 
 c-t plugin para moverse buffer ¿?   
+
+
+## Plugin
+
+### NERDtree
+
+```bash
+t: Open the selected file in a new tab
+i: Open the selected file in a horizontal split window
+s: Open the selected file in a vertical split window
+I: Toggle hidden files
+m: Show the NERD Tree menu
+R: Refresh the tree, useful if files change outside of Vim
+?: Toggle NERD Tree quick help
+```
