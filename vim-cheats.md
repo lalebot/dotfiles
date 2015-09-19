@@ -59,11 +59,36 @@ f busca ; sigue , vuelve
 V modo visual que selecciona columnas
 ctrl v modo de seleccion de columnas 
 u/U cambia a mayúscula/minuscula
-
-(HOLA Hola pirinola)
+gv repita la seleccion anterior
 
 
 -- Modo comando
+
+
+:[rango]d[elete] borra las líneas especificadas.
+:[rango]y[ank] copia líneas.
+:[línea]put pega el texto en la línea descrita.
+:[rango]co[py] {dirección} copia líneas especificadas debajo de la dirección. También se le invoca pulsando :t.
+:[rango]m[ove] {dirección} mueve líneas especificadas a la dirección elegida.
+:[rango]j[oin] junta líneas.
+:[rango]norm[al] {comando} ejectuda comandos del modo normal en las líneas especificadas.
+:[rango]s[ubstitute]/{pattern}/{string}/[flags] Reemplaza las ocurrencias de {pattern} con {string} en cada línea especificada.
+:[rango]g[lobal]/{pattern}/[comando] ejecuta un comando en cada línea especificadas que coincidan pon el patrón de búsqueda {pattern}.
+:[rango]p[rint] su misión es mostrarnos el rango, perfecto para practicar.
+:h [comando] información detallada de cada comando.
+
+Rangos:
+1 primera línea del arhivo..
+$ última línea del archivo..
+0 línea encima de la primera (no existe la línea 0), se usa para mover o pegar texto encima de la primera línea..
+. el punto, es la línea donde está ubicado nuestro cursor..
+% todo el archivo, un atajo upara el rango :1,$..
+:5,10p muestra lo que hay de la linea 5 a la 10.
+:'<,'>norm . ejecutar la ultima accion en modo normal de la visualizacion .
+.
+
+##############################################################
+
 :w Guardar
 :o abrir un archivo
 u deshacer lo último que hice
