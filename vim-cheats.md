@@ -99,5 +99,5 @@ s: Open the selected file in a vertical split window
 I: Toggle hidden files
 m: Show the NERD Tree menu
 R: Refresh the tree, useful if files change outside of Vim
-?: Toggle NERD Tree quick help
+?: Toggle NERD <TEXTAREA></TEXTAREA> quick help
 ```
