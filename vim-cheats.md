@@ -16,6 +16,36 @@ $ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 ```
 
 -- Modo Normal
+
+
+j bajar un número de línea, es decir, líneas separadas por un retorno de carro.
+gj bajar una línea visible, comportamiento habitual de los editores normales.
+k sube un número de línea.
+gk sube una línea como lo haría un editor corriente.
+0 va al principio de la línea real.
+{ va al principio del párrafo.
+} va al final del párrafo.
+gg va al principio del archivo.
+gg va al principio del archivo.
+G va al final del archivo.
+g0 va al principio de la línea visible en pantalla.
+^ va al primer carácter no en blanco de la línea real.
+g^ va al primer carácter no en blanco de la línea visible en pantalla.
+$ va al final de la línea real.
+g$ va al final de la línea visible en pantalla.
+w va hacia el principio de la siguiente palabra.
+b va hacia atrás, al principio de la palabra actual o de la anterior.
+e va al final de la palabra actual y si estamos allí, de la siguiente palabra.
+ge va al final de la palabra anterior.
+/búsqueda 
+f{carácter} va hacia delante hasta que encuentre el carácter.
+F{carácter} lo mismo que el anterior pero en dirección contraria.
+t{carácter} va hacia adelante y se para en una columna antes del carácter.
+T{carácter} lo mismo que el anterior pero en dirección contraria.
+; repite la última búsqueda de carácter.
+, da la vuelta a la última búsqueda.
+																										
+
 e Me muevo al final de la próxima palabra
 w Me muevo a la próxima palabra
 b Me muevo palabra atras
@@ -158,6 +188,18 @@ vim -S fichero_sesion
 :s fichero_sesion abre la sesion
 
 
+### Marcas
+ma Hago una marca y la guardo en la letra a
+`m Ir a la marca que tiene la a
+
+“ : ir a la posición antes del último salto en el archivo actual.
+`. : ir a la localización del último cambio.
+`^ : ir a la posición de la última inserción.
+`[ : ir a la posición inicial del último cambio o copia (yank).
+`] : ir a la posición final del último cambio o copia (yank).
+`< : ir a la posición inicial de la última selección visual.
+`> : ir a l aposición final de la última selección visual.
+							
 ##############################################################
 
 
@@ -202,8 +244,6 @@ ctrl W me muevo con NERDtree
 :vspl divido horizontalmente
 
 vimdiff dp aceptar los cambios que se ven
-
-adfkjj-t plugin para moverse buffer ¿?  
 
 
 Aprende algunos verbos

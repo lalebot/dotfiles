@@ -26,6 +26,7 @@ set laststatus=2
 " Color schemes
 Plugin 'baskerville/bubblegum'
 Plugin 'altercation/vim-colors-solarized'
+Plugin 'morhetz/gruvbox'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -113,15 +114,24 @@ if has("syntax")
 endif
 
 " Color bubblegum
-colorscheme bubblegum-256-dark
-let g:airline_theme = "bubblegum"
-set guifont=Terminess\ Powerline\ 11
+" colorscheme bubblegum-256-dark
+" let g:airline_theme = "bubblegum"
+" set guifont=Terminess\ Powerline\ 11
 
 " Color Solarized
 "colorscheme solarized
 "set background=dark
 "let g:airline_theme = "solarized"
 "set guifont=Droid\ Sans\ Mono\ for\ Powerline\ 10
+
+" Color gruvbox
+let g:gruvbox_bold = 0
+let g:gruvbox_italic = 0
+let g:gruvbox_italicize_comments = 0
+colorscheme gruvbox
+" Airline theme
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_theme = 'gruvbox'
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Powerline
