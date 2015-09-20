@@ -113,15 +113,15 @@ if has("syntax")
 endif
 
 " Color bubblegum
-" colorscheme bubblegum-256-dark
-" let g:airline_theme = "bubblegum"
-" set guifont=Terminess\ Powerline\ 11
+colorscheme bubblegum-256-dark
+let g:airline_theme = "bubblegum"
+set guifont=Terminess\ Powerline\ 11
 
 " Color Solarized
-colorscheme solarized
-set background=dark
-let g:airline_theme = "solarized"
-set guifont=Droid\ Sans\ Mono\ for\ Powerline\ 10
+"colorscheme solarized
+"set background=dark
+"let g:airline_theme = "solarized"
+"set guifont=Droid\ Sans\ Mono\ for\ Powerline\ 10
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Powerline
@@ -129,7 +129,14 @@ let $PYTHONPATH='/usr/lib/python3.4/site-packages'
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Remap para manejar los buffers
-nnoremap <silent> [b :bprevious<cr>
-nnoremap <silent> ]b :bnext<cr>
-nnoremap <silent> [B :bfirst<cr>
-nnoremap <silent> ]B :blast<cr>
+nmap <silent> sh <C-W>h
+nmap <silent> sj <C-W>j
+nmap <silent> sk <C-W>k
+nmap <silent> sl <C-W>l
+
+" Remap para manejar pestañas
+nnoremap <silent> sn :tabp<cr>
+nnoremap <silent> sm :tabn<cr>
+
+" Ocultar/desocultar NERDtree
+nnoremap <silent> si :NERDTreeToggle<cr>

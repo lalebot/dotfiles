@@ -7,6 +7,7 @@
 + http://voylinux.com/asi-que-quieres-aprender-usar-vim/
 + http://derekwyatt.org/vim/tutorials/novice/ 
 + http://vim.rtorr.com/lang/es_es/
++ http://juanjoalvarez.net/es/detail/2009/jun/25/vim-en-2-minutos/
 
 Vundle -> To install from command line: vim +PluginInstall +qall
 
@@ -43,6 +44,16 @@ C cambiar hasta el final de la linea
 s Sustituir es como un x y un i
 S sustituir la linea
 
+u deshacer lo último que hice
+ctr r rehacemos 
+y copiar
+o inserta una linea vacia debajo
+dl borrar un caracter de la izquierda
+dr borrar un caracter de la derecha
+. hace lo último que hicimos
+gg al principio uv selecciono G final
+
+
 tecla R entramos a modo insertar.
 
 r reemplazar para un solo carácter nos devuelve al modo normal, 
@@ -63,7 +74,10 @@ gv repita la seleccion anterior
 
 
 -- Modo comando
-
+:x / :xa guardar y salir
+:w guardar
+:q salir
+10gg ir a la linea 10
 
 :[rango]d[elete] borra las líneas especificadas.
 :[rango]y[ank] copia líneas.
@@ -106,23 +120,51 @@ $ última línea del archivo..
 :argdo [comando] nos permite realizar un comando en todos los archivos de la lista a la vez.
 :w[rite]a[all] guarda todos los archivos.
 :q[uit]a[all] sale de todos los archivos.
-										
+
+
+### Paneles
+
+<c-w>w moverse por los paneles. Pulsaremos de forma conjunta la tecla control y w, soltaremos las teclas y pulsaremos w de nuevo.
+<c-w>h ir al panel de la izquierda.
+<c-w>j ir al panel de abajo.
+<c-w>k ir al panel de arriba.
+<c-w>l ir al panel de la derecha.
+<c-w>c cerrar panel. También hace lo mismo :cl[ose].
+<c-w>o mantener el panel activo, cerrando los demás. También nos sirve :on[ly].
+<c-w>= iguala la altura y anchura de los paneles.
+<c-w>_ maximiza la altura del panel activo.
+<c-w>| maximiza el alncho del panel activo.
+[N]<c-w>_ la alturá será de [N] filas.
+[N]<c-w>| la anchura será de [N] columnas.
+:h window-moving
+
+### Pestañas
+:tabnew abre una nueva pestaña.
+:lcd {ruta} cambia la ruta (la carpeta) donde apunta el panel.
+:windo lcd {ruta} cambia la ruta donde apuntan todos los paneles de una pestaña
+<c-w>T mueve el panel actual a una nueva pestaña.
+:tabe[dit] {archivo} abre un archivo en una nueva pestaña
+:tabc[lose] cerrar la pestaña. 
+:tabo[nly] cerrar todas las pestañas menos la activa.
+:tabn[ext] {N} ir a la pestaña {N}. También nos sirve {N}gt
+:tabn[ext] ir a la siguiente pestaña. gt hará lo mismo.
+:tabp[revious] ir a la pestaña anterior. gT tiene el mismo resultado.
+:tabmove [N] sirve para mover las pestañas.
+:h tabpage
+
+### Sesiones
+:mks guarda una sesion
+vim -S fichero_sesion
+:s fichero_sesion abre la sesion
+
+
 ##############################################################
+
 
 :w Guardar
 :o abrir un archivo
-u deshacer lo último que hice
- 
-cf. Cambiar hasta el punto
-dd cambia toda la linea
-cc cambia toda la linea
 
-y copiar
-o inserta una linea vacia debajo
-dl borrar un caracter de la izquierda
-
-. hace lo último que hicimos
-numero mas comando y se lo repite
+umero mas comando y se lo repite
 10 i =  Esc ==================== 
 % voy al otro par de la llave (espejo)
 Macros !!!!
@@ -145,7 +187,6 @@ Puedo marcar y luego reemplazar en esa zona
 identar =
 < identar +/-
 
-gg al principio uv selecciono G final
 
 :! comando unix
 
@@ -157,8 +198,8 @@ q (letra) grabo macro q
 
 ctrl W me muevo con NERDtree
 
-:split  divido verticalemten
-:vsplit divido horizontalmente
+:spl divido verticalemten
+:vspl divido horizontalmente
 
 vimdiff dp aceptar los cambios que se ven
 
