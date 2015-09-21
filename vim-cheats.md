@@ -155,7 +155,7 @@ $ última línea del archivo..
 ### Paneles
 
 <c-w>w moverse por los paneles. Pulsaremos de forma conjunta la tecla control y w, soltaremos las teclas y pulsaremos w de nuevo.
-<c-w>h ir al panel de la izquierda.
+c-w>h ir al panel de la izquieasada.
 <c-w>j ir al panel de abajo.
 <c-w>k ir al panel de arriba.
 <c-w>l ir al panel de la derecha.

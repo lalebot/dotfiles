@@ -12,7 +12,8 @@ Plugin 'VundleVim/Vundle.vim'
 
 " Navegador de archivos
 Plugin 'scrooloose/nerdtree'
-" Plugin 'Xuyuanp/nerdtree-git-plugin'
+" Plugin 'jistr/vim-nerdtree-tabs'
+" jPlugin 'Xuyuanp/nerdtree-git-plugin'
 
 " Git
 Plugin 'airblade/vim-gitgutter'
@@ -27,6 +28,10 @@ set laststatus=2
 Plugin 'baskerville/bubblegum'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'morhetz/gruvbox'
+"Plugin 'shinchu/lightline-gruvbox'
+Plugin 'jpo/vim-railscasts-theme'
+
+Plugin 'scrooloose/syntastic'     " muestra errores de syntaxis
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -48,26 +53,6 @@ filetype plugin indent on    " required
 " NERDtree
 autocmd vimenter * NERDTree
 
-" NERDTress File highlighting
-function! NERDTreeHighlightFile(extension, fg, bg, guifg, guibg)
- exec 'autocmd FileType nerdtree highlight ' . a:extension .' ctermbg='. a:bg .' ctermfg='. a:fg .' guibg='. a:guibg .' guifg='. a:guifg
- exec 'autocmd FileType nerdtree syn match ' . a:extension .' #^\s\+.*'. a:extension .'$#'
-endfunction
-
-call NERDTreeHighlightFile('jade', 'green', 'none', 'green', '#151515')
-call NERDTreeHighlightFile('ini', 'yellow', 'none', 'yellow', '#151515')
-call NERDTreeHighlightFile('md', 'blue', 'none', '#3366FF', '#151515')
-call NERDTreeHighlightFile('yml', 'yellow', 'none', 'yellow', '#151515')
-call NERDTreeHighlightFile('config', 'yellow', 'none', 'yellow', '#151515')
-call NERDTreeHighlightFile('conf', 'yellow', 'none', 'yellow', '#151515')
-call NERDTreeHighlightFile('json', 'yellow', 'none', 'yellow', '#151515')
-call NERDTreeHighlightFile('html', 'yellow', 'none', 'yellow', '#151515')
-call NERDTreeHighlightFile('styl', 'cyan', 'none', 'cyan', '#151515')
-call NERDTreeHighlightFile('css', 'cyan', 'none', 'cyan', '#151515')
-call NERDTreeHighlightFile('coffee', 'Red', 'none', 'red', '#151515')
-call NERDTreeHighlightFile('js', 'Red', 'none', '#ffa500', '#151515')
-call NERDTreeHighlightFile('php', 'Magenta', 'none', '#ff00ff', '#151515')
-
 " The default 20 isn't nearly enough
 set history=9999
 " Show the numbers on the left of the screen
@@ -81,42 +66,51 @@ set shortmess=I
 " Disable beeping and flashing.
 set noerrorbells visualbell t_vb=
 autocmd GUIEnter * set visualbell t_vb=
-" Use smarter defaults
-set smartindent
-set smarttab
-" The tabstop look best at 4 spacing
-set tabstop=4
-set softtabstop=4
-set shiftwidth=4
+
 " Always show the last line
 set display+=lastline
 " UTF-8
 set encoding=utf-8
 " Enhanced mode for command-line completion
-set wildmenu
+" set wildmenu
 " Automatically re-read the file if it has changed
 set autoread
 " Varios
-set showcmd    " Show (partial) command in status line.
 set showmatch     " Show matching brackets.
 set ignorecase    " Do case insensitive matching
 " set smartcase     " Do smart case matchiny
 " set incsearch     " Incremental search
-" set hidden     " Hide buffers when they are abandoned
+set hidden     " Hide buffers when they are abandoned
 " set mouse=a    " Enable mouse usage (all modes)
-" set smartindent " auto tab
 
+" Ver puntos en los tabs"
+set list
+set listchars=tab:>·,eol:¬,trail:~,extends:>,precedes:<,nbsp:%
 
+" size of a hard tabstop
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
+set expandtab
+" Use smarter defaults
+set smartindent
+set smarttab
+" Use autoindenting
+set autoindent
 
 " Pretty colors
 if has("syntax")
   syntax on
 endif
 
+" Color lightline-gruvbox'"
+"let g:lightline = {}
+"let g:lightline.colorscheme = 'gruvbox'
+
 " Color bubblegum
-" colorscheme bubblegum-256-dark
-" let g:airline_theme = "bubblegum"
-" set guifont=Terminess\ Powerline\ 11
+"colorscheme bubblegum-256-dark
+"let g:airline_theme = "bubblegum"
+"set guifont=Terminess\ Powerline\ 11
 
 " Color Solarized
 "colorscheme solarized
@@ -125,11 +119,12 @@ endif
 "set guifont=Droid\ Sans\ Mono\ for\ Powerline\ 10
 
 " Color gruvbox
+set background=dark 
 let g:gruvbox_bold = 0
 let g:gruvbox_italic = 0
 let g:gruvbox_italicize_comments = 0
 colorscheme gruvbox
-" Airline theme
+"" Airline theme
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme = 'gruvbox'
 
@@ -138,7 +133,7 @@ let g:airline_theme = 'gruvbox'
 let $PYTHONPATH='/usr/lib/python3.4/site-packages'
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-" Remap para manejar los buffers
+" Remap para manejar los paneles
 nmap <silent> sh <C-W>h
 nmap <silent> sj <C-W>j
 nmap <silent> sk <C-W>k
@@ -150,3 +145,7 @@ nnoremap <silent> sm :tabn<cr>
 
 " Ocultar/desocultar NERDtree
 nnoremap <silent> si :NERDTreeToggle<cr>
+
+" Remap para manejar los buffers
+nnoremap <silent> sa :bprevious<cr>
+nnoremap <silent> sd :bnext<cr>
