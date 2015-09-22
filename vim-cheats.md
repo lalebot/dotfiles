@@ -15,6 +15,8 @@ Vundle -> To install from command line: vim +PluginInstall +qall
 $ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 ```
 
+Reemplazar tabs por espacios: **:%s/\t/    /gc**
+
 -- Modo Normal
 
 
