@@ -17,7 +17,7 @@ $ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
 Reemplazar tabs por espacios: **:%s/\t/    /gc**
 
--- Modo Normal
+## Modo Normal
 
 
 j bajar un número de línea, es decir, líneas separadas por un retorno de carro.

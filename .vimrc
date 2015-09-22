@@ -13,12 +13,12 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 " Bundles"
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 NeoBundle 'Shougo/neobundle.vim'
-NeoBundle 'VundleVim/Vundle.vim'
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'airblade/vim-gitgutter' " Git
 NeoBundle 'nathanaelkane/vim-indent-guides'
 NeoBundle 'honza/vim-snippets'
 NeoBundle 'scrooloose/syntastic'     " muestra errores de syntaxis
+" NeoBundle 'Xuyuanp/nerdtree-git-plugin'
 
 NeoBundle 'bling/vim-airline'
 let g:airline#extensions#tabline#enabled = 1
@@ -54,7 +54,7 @@ set cc=80
 set history=1000         " remember more commands and search history
 set undolevels=1000      " use many muchos levels of undo
 set laststatus=2
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc,*/.git/*
+set wildignore+=*.so,*.swp,*.zip,*.pyc,*/.git/*
 set title                " change the terminal's title
 set visualbell           " don't beep
 set noerrorbells         " don't beep
