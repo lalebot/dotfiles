@@ -82,3 +82,35 @@ ctrl W me muevo con NERDtree
 vimdiff dp aceptar los cambios que se ven
 
 c-t plugin para moverse buffer ¿?   
+
+ci" cambiar dentro de las comillas
+vap selecciona alrededor del parrafo
+
+todo
+- vim-airline
+- vim theme gruvbox
+- Vundle
+- NERD Tree
+- Vim Airline
+- Rainbow parenthesis
+- Vim gitgutter
+
+verbos:
+v (visual)
+c (change/cambiar)
+d (delete/borrar)
+y (yank/copiar).
+
+modificadores:
+i (inside/dentro de)
+a (around/alrededor)
+t (till../hasta que encuentra el carácter)
+f (find../hasta que encuentra el carácter incluyéndolo)
+/ (buscar).
+
+objetos: 
+w (word/palabra)
+s (sentence/frase) 
+p (paragraph/párrafo) 
+b (block/parentesis)
+t (tag/ para html/xml)
