@@ -8,6 +8,7 @@
 + http://derekwyatt.org/vim/tutorials/novice/ 
 + http://vim.rtorr.com/lang/es_es/
 + http://juanjoalvarez.net/es/detail/2009/jun/25/vim-en-2-minutos/
++ http://benmccormick.org/2014/07/21/learning-vim-in-2014-getting-more-from-vim-with-plugins/
 
 Vundle -> To install from command line: vim +PluginInstall +qall
 
