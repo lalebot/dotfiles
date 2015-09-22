@@ -33,11 +33,8 @@ Plugin 'jpo/vim-railscasts-theme'
 
 Plugin 'scrooloose/syntastic'     " muestra errores de syntaxis
 
-" All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
-" To ignore plugin indent changes, instead use:
-"filetype plugin on
 "
 " Brief help
 " :PluginList       - lists configured plugins
@@ -45,8 +42,6 @@ filetype plugin indent on    " required
 " :PluginSearch foo - searches for foo; append `!` to refresh local cache
 " :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
 "
-" see :h vundle for more details or wiki for FAQ
-" Put your non-Plugin stuff after this line
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -61,6 +56,8 @@ set number
 set ruler
 " Show the current command at the bottom
 set showcmd
+" Evitamos el Wrapping
+set wrap
 " Don't show the startup message
 set shortmess=I
 " Disable beeping and flashing.
@@ -80,23 +77,43 @@ set showmatch     " Show matching brackets.
 set ignorecase    " Do case insensitive matching
 " set smartcase     " Do smart case matchiny
 " set incsearch     " Incremental search
-set hidden     " Hide buffers when they are abandoned
-" set mouse=a    " Enable mouse usage (all modes)
+set hidden      " Hide buffers when they are abandoned
+" set mouse=a   " Enable mouse usage (all modes)
 
 " Ver puntos en los tabs"
 set list
 set listchars=tab:>·,eol:¬,trail:~,extends:>,precedes:<,nbsp:%
 
 " size of a hard tabstop
+set noexpandtab
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
-set expandtab
+
 " Use smarter defaults
 set smartindent
 set smarttab
 " Use autoindenting
 set autoindent
+set copyindent
+
+" Undo levels
+set undolevels=1000
+
+" Change terminal title 
+set title
+
+" Disable foldin
+set nofoldenable
+
+" Swap file save my work many times :) 
+set swapfile
+
+" Use F2 when pasting to avoid applying indents 
+set pastetoggle=<F2>
+
+
+
 
 " Pretty colors
 if has("syntax")
@@ -119,12 +136,12 @@ endif
 "set guifont=Droid\ Sans\ Mono\ for\ Powerline\ 10
 
 " Color gruvbox
-set background=dark 
+set background=dark
 let g:gruvbox_bold = 0
 let g:gruvbox_italic = 0
 let g:gruvbox_italicize_comments = 0
 colorscheme gruvbox
-"" Airline theme
+" Airline theme
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme = 'gruvbox'
 
