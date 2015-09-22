@@ -3,92 +3,166 @@ filetype off                  " required
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
-
 call vundle#begin()
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
 
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
 " Navegador de archivos
-"Plugin 'python.vim'
-"Plugin 'klen/python-mode'
 Plugin 'scrooloose/nerdtree'
-"Plugin 'jistr/vim-nerdtree-tabs'
+" Plugin 'jistr/vim-nerdtree-tabs'
+" jPlugin 'Xuyuanp/nerdtree-git-plugin'
 
-Plugin 'bling/vim-airline' " lean & mean status/tabline for vim that's light as air
+" Git
+Plugin 'airblade/vim-gitgutter'
+
+" lean & mean status/tabline for vim that's light as air
+Plugin 'bling/vim-airline'
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
 set laststatus=2
 
-"Plugin 'edkolev/tmuxline.vim' " set airline colors to tmux
-
-"Plugin 'rainbow_parentheses.vim'
-"au VimEnter * RainbowParenthesesToggle
-"au VimEnter * RainbowParenthesesLoadSquare   " []
-"au VimEnter * RainbowParenthesesLoadBraces   " {}
-"au Syntax * RainbowParenthesesLoadRound
-"au Syntax * RainbowParenthesesLoadSquare
-"au Syntax * RainbowParenthesesLoadBraces
-
-Plugin 'airblade/vim-gitgutter'
-highlight clear SignColumn
-
-"Plugin 'tpope/vim-commentary'     " hace comentarios
-Plugin 'scrooloose/syntastic'     " muestra errores de syntaxis
-Plugin 'tpope/vim-fugitive'       " git plugin
-
 " Color schemes
-"Plugin 'altercation/vim-colors-solarized'
-"Plugin 'sickill/vim-monokai'
 Plugin 'baskerville/bubblegum'
-"Plugin '29decibel/codeschool-vim-theme'
-"Plugin 'tomasr/molokai'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'morhetz/gruvbox'
+"Plugin 'shinchu/lightline-gruvbox'
+Plugin 'jpo/vim-railscasts-theme'
 
-"Plugin 'tpope/vim-surround'           " S para surround rodear algo con comillas
-"Plugin 'Lokaltog/vim-easymotion'      " moverse facil por el documento
-"Plugin 'KabbAmine/vCoolor.vim'        " gui color picker
-"Plugin 'gorodinskiy/vim-coloresque'   " color highlight
-"Plugin 'majutsushi/tagbar'            " tags plugin
-"Plugin 'Shougo/neocomplcache.vim'     " autocompletado
+Plugin 'scrooloose/syntastic'     " muestra errores de syntaxis
 
 call vundle#end()            " required
 filetype plugin indent on    " required
+"
+" Brief help
+" :PluginList       - lists configured plugins
+" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
+" :PluginSearch foo - searches for foo; append `!` to refresh local cache
+" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
+"
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" NERDtree
 autocmd vimenter * NERDTree
 
-" line enables syntax highlighting by default.
+" The default 20 isn't nearly enough
+set history=9999
+" Show the numbers on the left of the screen
+set number
+" Show the column/row
+set ruler
+" Show the current command at the bottom
+set showcmd
+" Evitamos el Wrapping
+set wrap
+" Don't show the startup message
+set shortmess=I
+" Disable beeping and flashing.
+set noerrorbells visualbell t_vb=
+autocmd GUIEnter * set visualbell t_vb=
+
+" Always show the last line
+set display+=lastline
+" UTF-8
+set encoding=utf-8
+" Enhanced mode for command-line completion
+" set wildmenu
+" Automatically re-read the file if it has changed
+set autoread
+" Varios
+set showmatch     " Show matching brackets.
+set ignorecase    " Do case insensitive matching
+" set smartcase     " Do smart case matchiny
+" set incsearch     " Incremental search
+set hidden      " Hide buffers when they are abandoned
+" set mouse=a   " Enable mouse usage (all modes)
+
+" Ver puntos en los tabs"
+set list
+set listchars=tab:>·,eol:¬,trail:~,extends:>,precedes:<,nbsp:%
+
+" size of a hard tabstop
+set noexpandtab
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
+
+" Use smarter defaults
+set smartindent
+set smarttab
+" Use autoindenting
+set autoindent
+set copyindent
+
+" Undo levels
+set undolevels=1000
+
+" Change terminal title 
+set title
+
+" Disable foldin
+set nofoldenable
+
+" Swap file save my work many times :) 
+set swapfile
+
+" Use F2 when pasting to avoid applying indents 
+set pastetoggle=<F2>
+
+
+
+
+" Pretty colors
 if has("syntax")
   syntax on
 endif
 
-" Si hemos abierto Vim en modo GUI
-if has("gui_running")
-    colorscheme solarized
-    set background=dark
-    let g:airline_theme = "solarized"
-    set guifont=Droid\ Sans\ Mono\ for\ Powerline\ 10
-else
-    colorscheme bubblegum-256-dark
-    let g:airline_theme = "bubblegum"
-    set guifont=Terminess\ Powerline\ 11
-endif
+" Color lightline-gruvbox'"
+"let g:lightline = {}
+"let g:lightline.colorscheme = 'gruvbox'
 
-"if has("autocmd")
-"  au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
-"endif
+" Color bubblegum
+"colorscheme bubblegum-256-dark
+"let g:airline_theme = "bubblegum"
+"set guifont=Terminess\ Powerline\ 11
 
-"if has("autocmd")
-"  filetype plugin indent on
-"endif
+" Color Solarized
+"colorscheme solarized
+"set background=dark
+"let g:airline_theme = "solarized"
+"set guifont=Droid\ Sans\ Mono\ for\ Powerline\ 10
 
-"set showcmd    " Show (partial) command in status line.
-"set showmatch     " Show matching brackets.
-"set ignorecase    " Do case insensitive matching
-"set smartcase     " Do smart case matchiny
-"set incsearch     " Incremental search
-"set hidden     " Hide buffers when they are abandoned
-"set mouse=a    " Enable mouse usage (all modes)
-"set smartindent " auto tab
+" Color gruvbox
+set background=dark
+let g:gruvbox_bold = 0
+let g:gruvbox_italic = 0
+let g:gruvbox_italicize_comments = 0
+colorscheme gruvbox
+" Airline theme
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_theme = 'gruvbox'
 
-let $PYTHONPATH='/usr/lib/python3.4/site-packages' " Para que ande el powerline
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Powerline
+let $PYTHONPATH='/usr/lib/python3.4/site-packages'
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" Remap para manejar los paneles
+nmap <silent> sh <C-W>h
+nmap <silent> sj <C-W>j
+nmap <silent> sk <C-W>k
+nmap <silent> sl <C-W>l
+
+" Remap para manejar pestañas
+nnoremap <silent> sn :tabp<cr>
+nnoremap <silent> sm :tabn<cr>
+
+" Ocultar/desocultar NERDtree
+nnoremap <silent> si :NERDTreeToggle<cr>
+
+" Remap para manejar los buffers
+nnoremap <silent> sa :bprevious<cr>
+nnoremap <silent> sd :bnext<cr>

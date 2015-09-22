@@ -26,7 +26,7 @@ $ yaourt -S tilda sakura konsole
 Fish shell
 ```bash
 $ yaourt -S fish # Install fish
-$ chsh -s /usr/local/bin/fish # Default fish
+$ chsh -s /usr/bin/fish # Default fish
 
 $ curl -L github.com/oh-my-fish/oh-my-fish/raw/master/bin/install | sh # Install oh-my-fish
 $ omf theme agnoster
@@ -47,18 +47,18 @@ Generate menu in desktop:
 $ menumaker - mmaker -vf OpenBox3
 ```
 
-Theme: Numix theme
-Icons: ultra-flattr / faenza / elementary / moka
+Theme: Numix theme - Numix solarized
+Icons: ultra-flattr - moka - uniform - dalisha - numix
 
 
 ### Dev
 ```bash
-$ yaourt -S vim git sublimetext geany python perl
+$ yaourt -S vim git sublimetext geany python perl godot
 ```
 
 ### Programs
 ```bash
-$ yaourt -S wps npm evince clipit thunar smplayer vlc megasync transmission mlocate xdiskusage firefox chromium scrot popcorntime xclip
+$ yaourt -S wps npm evince2-light clipit thunar smplayer vlc megasync transmission mlocate xdiskusage firefox chromium scrot popcorntime xclip
 ```
 
 To set default lenguaje in wps copy /opt/kingsoft/wps-office/office6/dicts/es_ES

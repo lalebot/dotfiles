@@ -1,0 +1,30 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"AdvancedNewFile",
+		"ASCII Decorator",
+		"BracketHighlighter",
+		"Git",
+		"GitGutter",
+		"GTKDarkThemeVariantSetter",
+		"Markdown Preview",
+		"MarkdownEditing",
+		"Monokai - Spacegray",
+		"Package Control",
+		"Pandoc",
+		"Predawn",
+		"SideBarEnhancements",
+		"SublimeLinter",
+		"SublimeLinter-pep8",
+		"SublimeREPL",
+		"Sublimerge Pro",
+		"Terminal",
+		"Theme - Aprosopo",
+		"Theme - Spacegray",
+		"VimL"
+	]
+}
