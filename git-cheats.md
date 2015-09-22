@@ -103,7 +103,8 @@ $ git branch # Ver ramas
 $ git checkout -b primera-rama # Crear una rama
 $ git checkout master
 $ git merge iss43 # Merge de la rama iss43 estando en la rama master
-$ git mergetool # En el caso de que se generen conflictos y queramos resolverlos visualmente.
+$ git mergetool -t kdiff3 # En el caso de que se generen conflictos y queramos resolverlos visualmente.
+$ git mergetool -t meld
 $ git branch -d segunda-rama # Eliminar Rama, con -D se fuerza el borrado
 $ git branch -m devel dv # Renombrar rama local
 $ git branch --merged # Ver solo ramas fusionadas

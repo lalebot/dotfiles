@@ -1,124 +1,137 @@
-set nocompatible              " be iMproved, required
-filetype off                  " required
+if 0 | endif
 
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
+if has('vim_starting')
+  if &compatible
+    set nocompatible               " Be iMproved
+  endif
+  " Required:
+  set runtimepath+=~/.vim/bundle/neobundle.vim/
+endif
 
-" let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
+" Required:
+call neobundle#begin(expand('~/.vim/bundle/'))
 
-" Navegador de archivos
-Plugin 'scrooloose/nerdtree'
-" Plugin 'jistr/vim-nerdtree-tabs'
-" jPlugin 'Xuyuanp/nerdtree-git-plugin'
+" Let NeoBundle manage NeoBundle
+" Required:
+NeoBundleFetch 'Shougo/neobundle.vim'
 
-" Git
-Plugin 'airblade/vim-gitgutter'
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Bundles"
+NeoBundle 'Shougo/neobundle.vim'
+
+NeoBundle 'VundleVim/Vundle.vim'
+
+NeoBundle 'scrooloose/nerdtree'
+
+NeoBundle 'airblade/vim-gitgutter' " Git
+
+NeoBundle 'nathanaelkane/vim-indent-guides'
+
+NeoBundle 'honza/vim-snippets'
+
+NeoBundle 'scrooloose/syntastic'     " muestra errores de syntaxis
 
 " lean & mean status/tabline for vim that's light as air
-Plugin 'bling/vim-airline'
+NeoBundle 'bling/vim-airline'
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
-set laststatus=2
 
 " Color schemes
-Plugin 'baskerville/bubblegum'
-Plugin 'altercation/vim-colors-solarized'
-Plugin 'morhetz/gruvbox'
-"Plugin 'shinchu/lightline-gruvbox'
-Plugin 'jpo/vim-railscasts-theme'
+NeoBundle 'baskerville/bubblegum'
+NeoBundle 'altercation/vim-colors-solarized'
+NeoBundle 'morhetz/gruvbox'
+"NeoBundle 'shinchu/lightline-gruvbox'
+NeoBundle 'jpo/vim-railscasts-theme'
 
-Plugin 'scrooloose/syntastic'     " muestra errores de syntaxis
+call neobundle#end()
 
-call vundle#end()            " required
-filetype plugin indent on    " required
-"
-" Brief help
-" :PluginList       - lists configured plugins
-" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
-" :PluginSearch foo - searches for foo; append `!` to refresh local cache
-" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
-"
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Basics
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+syntax enable
+set enc=utf-8
+set fileencoding=utf-8
+set fileencodings=ucs-bom,utf8,prc
+
+filetype on
+filetype plugin on
+filetype indent on
+
+" If there are uninstalled bundles found on startup,
+NeoBundleCheck
+
+set cc=80
+
+set history=1000         " remember more commands and search history
+set undolevels=1000      " use many muchos levels of undo
+set laststatus=2
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc,*/.git/*
+set title                " change the terminal's title
+set visualbell           " don't beep
+set noerrorbells         " don't beep
+set hidden      " Hide buffers when they are abandoned
+
+set nobackup
+set swapfile
+
+set number               " Show the numbers on the left of the screen
+set ruler                " Show the column/row
+set showcmd              " Show the current command at the bottom
+set shortmess=I          " Don't show the startup message
+
+set display+=lastline    " Always show the last line
+" set wildmenu           " Enhanced mode for command-line completion
+
+set autoread             " Automatically re-read the file if it has changed
+set showmatch     " Show matching brackets.
+set ignorecase    " Do case insensitive matching
+
+set list           " Ver puntos en los tabs
+set listchars=tab:>·,eol:¬,trail:~,extends:>,precedes:<,nbsp:%
+
+set nowrap        " don't wrap lines
+set tabstop=4     " a tab is four spaces
+set shiftwidth=4  " number of spaces to use for autoindenting
+set noexpandtab
+set softtabstop=4
+set autoindent    " always set autoindenting on
+set smartindent   " Use smarter defaults
+set copyindent    " copy the previous indentation on autoindenting
+
+set backspace=indent,eol,start     " allow backspacing over everything in insert mode
+set shiftround    " use multiple of shiftwidth when indenting with '<' and '>'
+set showmatch     " set show matching parenthesis
+set ignorecase    " ignore case when searching
+set smartcase     " ignore case if search pattern is all lowercase,
+                  "    case-sensitive otherwise
+set smarttab      " insert tabs on the start of a line according to
+                    "    shiftwidth, not tabstop
+set hlsearch      " highlight search terms
+set incsearch     " show search matches as you type
+
+set nofoldenable  " Disable foldin
+set pastetoggle=<F2>  " Use F2 when pasting to avoid applying indents 
+set mouse=a   " Enable mouse usage (all modes)
+
+:syntax on
+
+""""""""
+" PYTHON
+autocmd filetype python set expandtab set nowrap
+
+
+"""""""""""
+" Powerline
+let $PYTHONPATH='/usr/lib/python3.4/site-packages'
+"""""""""""
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Bundles"
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " NERDtree
 autocmd vimenter * NERDTree
-
-" The default 20 isn't nearly enough
-set history=9999
-" Show the numbers on the left of the screen
-set number
-" Show the column/row
-set ruler
-" Show the current command at the bottom
-set showcmd
-" Evitamos el Wrapping
-set wrap
-" Don't show the startup message
-set shortmess=I
-" Disable beeping and flashing.
-set noerrorbells visualbell t_vb=
-autocmd GUIEnter * set visualbell t_vb=
-
-" Always show the last line
-set display+=lastline
-" UTF-8
-set encoding=utf-8
-" Enhanced mode for command-line completion
-" set wildmenu
-" Automatically re-read the file if it has changed
-set autoread
-" Varios
-set showmatch     " Show matching brackets.
-set ignorecase    " Do case insensitive matching
-" set smartcase     " Do smart case matchiny
-" set incsearch     " Incremental search
-set hidden      " Hide buffers when they are abandoned
-" set mouse=a   " Enable mouse usage (all modes)
-
-" Ver puntos en los tabs"
-set list
-set listchars=tab:>·,eol:¬,trail:~,extends:>,precedes:<,nbsp:%
-
-" size of a hard tabstop
-set noexpandtab
-set tabstop=4
-set shiftwidth=4
-set softtabstop=4
-
-" Use smarter defaults
-set smartindent
-set smarttab
-" Use autoindenting
-set autoindent
-set copyindent
-
-" Undo levels
-set undolevels=1000
-
-" Change terminal title 
-set title
-
-" Disable foldin
-set nofoldenable
-
-" Swap file save my work many times :) 
-set swapfile
-
-" Use F2 when pasting to avoid applying indents 
-set pastetoggle=<F2>
-
-
-
-
-" Pretty colors
-if has("syntax")
-  syntax on
-endif
 
 " Color lightline-gruvbox'"
 "let g:lightline = {}
@@ -136,7 +149,6 @@ endif
 "set guifont=Droid\ Sans\ Mono\ for\ Powerline\ 10
 
 " Color gruvbox
-set background=dark
 let g:gruvbox_bold = 0
 let g:gruvbox_italic = 0
 let g:gruvbox_italicize_comments = 0
@@ -145,11 +157,11 @@ colorscheme gruvbox
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme = 'gruvbox'
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Powerline
-let $PYTHONPATH='/usr/lib/python3.4/site-packages'
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set background=dark
 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" REMAP
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Remap para manejar los paneles
 nmap <silent> sh <C-W>h
 nmap <silent> sj <C-W>j
