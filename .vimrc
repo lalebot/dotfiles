@@ -13,7 +13,6 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 " Bundles"
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 NeoBundle 'Shougo/neobundle.vim'
-NeoBundle 'VundleVim/Vundle.vim'
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'airblade/vim-gitgutter' " Git
 NeoBundle 'nathanaelkane/vim-indent-guides'
