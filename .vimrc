@@ -23,8 +23,9 @@ NeoBundle 'scrooloose/syntastic'     " muestra errores de syntaxis
 NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'tpope/vim-commentary'
 NeoBundle 'reedes/vim-thematic'
-NeoBundle 'Valloric/YouCompleteMe'
+" NeoBundle 'Valloric/YouCompleteMe'
 NeoBundle 'easymotion/vim-easymotion'
+NeoBundle 'Yggdroot/indentLine'
 
 NeoBundle 'bling/vim-airline'
 let g:airline#extensions#tabline#enabled = 1
@@ -56,6 +57,9 @@ filetype indent on
 " If there are uninstalled bundles found on startup,
 NeoBundleCheck
 
+set t_Co=256
+set term=xterm-256color
+
 set cc=80
 
 set history=1000         " remember more commands and search history
@@ -85,7 +89,7 @@ set ignorecase    " Do case insensitive matching
 set list           " Ver puntos en los tabs
 set listchars=tab:>·,eol:¬,trail:~,extends:>,precedes:<,nbsp:%
 
-set nowrap        " don't wrap lines
+set wrap        " wrap lines
 set tabstop=4     " a tab is four spaces
 set shiftwidth=4  " number of spaces to use for autoindenting
 set noexpandtab
@@ -127,9 +131,11 @@ let $PYTHONPATH='/usr/lib/python3.4/site-packages'
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " NERDtree
 autocmd vimenter * NERDTree
+let NERDTreeWinSize = 20
+" let NERDTreeShowHidden = 1
 
-"colorscheme bubblegum-256-dark
-"let g:airline_theme = "bubblegum"
+colorscheme bubblegum-256-dark
+let g:airline_theme = "bubblegum"
 
 "colorscheme solarized
 "let g:airline_theme = "solarized"
@@ -139,16 +145,18 @@ autocmd vimenter * NERDTree
 let g:gruvbox_bold = 0
 let g:gruvbox_italic = 0
 let g:gruvbox_italicize_comments = 0
-colorscheme gruvbox
-" Airline theme
-let g:airline#extensions#tabline#enabled = 1
-let g:airline_theme = 'gruvbox'
+" colorscheme gruvbox
+"let g:airline#extensions#tabline#enabled = 1
+"let g:airline_theme = 'gruvbox'
 
 set background=dark
 set guifont=Terminess\ Powerline\ 11
 
 " Markdown
 let g:markdown_fenced_languages = ['coffee', 'css', 'erb=eruby', 'javascript', 'js=javascript', 'json=javascript', 'ruby', 'sass', 'xml']
+
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP' " Para hacer paste desde el plugin
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " REMAP
@@ -170,5 +178,5 @@ nnoremap <silent> si :NERDTreeToggle<cr>
 nnoremap <silent> sa :bprevious<cr>
 nnoremap <silent> sd :bnext<cr>
 
-let g:ctrlp_map = '<c-p>'
-let g:ctrlp_cmd = 'CtrlP' " Para hacer paste desde el plugin
+nnoremap <silent> <Leader>+ :exe "resize " . (winheight(0) * 3/2)<CR>
+nnoremap <silent> <Leader>- :exe "resize " . (winheight(0) * 2/3)<CR>

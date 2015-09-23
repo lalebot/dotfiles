@@ -47,7 +47,7 @@ t{carácter} va hacia adelante y se para en una columna antes del carácter.
 T{carácter} lo mismo que el anterior pero en dirección contraria.
 ; repite la última búsqueda de carácter.
 , da la vuelta a la última búsqueda.
-																										
+
 
 e Me muevo al final de la próxima palabra
 w Me muevo a la próxima palabra
@@ -202,9 +202,8 @@ ma Hago una marca y la guardo en la letra a
 `] : ir a la posición final del último cambio o copia (yank).
 `< : ir a la posición inicial de la última selección visual.
 `> : ir a l aposición final de la última selección visual.
-							
-##############################################################
 
+---
 
 :w Guardar
 :o abrir un archivo
