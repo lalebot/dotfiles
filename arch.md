@@ -1,4 +1,89 @@
-# Arch
+# Archlinux Configuration
+
+### Base
+add **/etc/pacman.conf**
+```
+[archlinuxfr]
+SigLevel = Never
+Server = http://repo.archlinux.fr/$arch
+```
+
+```bash
+$ sudo pacman -S yaourt
+```
+
+```bash
+$ yaourt -S base base-devel samba htop tmux
+```
+
+
+### Shell
+Terminal emulator
+```bash
+$ yaourt -S tilda sakura konsole
+```
+
+Fish shell
+```bash
+$ yaourt -S fish # Install fish
+$ chsh -s /usr/bin/fish # Default fish
+
+$ curl -L github.com/oh-my-fish/oh-my-fish/raw/master/bin/install | sh # Install oh-my-fish
+$ omf theme agnoster
+
+$ yaourt -S python-powerline-git
+```
+
+https://github.com/powerline/fonts
+
+
+### Openbox
+```bash
+$ yaourt -S openbox obmenu obkey obconf lxappearance slim slim-themes xorg-xev menumaker nitrogen tint2 pnmixer xscreensaver gmrun lxrandr plank
+```
+
+Generate menu in desktop: 
+```bash
+$ menumaker - mmaker -vf OpenBox3
+```
+
+Theme: Numix theme - Numix solarized
+Icons: ultra-flattr - moka - uniform - dalisha - numix
+
+
+### Dev
+```bash
+$ yaourt -S vim git sublimetext geany python perl godot
+```
+
+### Programs
+```bash
+$ yaourt -S wps npm evince2-light clipit thunar smplayer vlc megasync transmission mlocate xdiskusage firefox chromium scrot popcorntime xclip
+```
+
+To set default lenguaje in wps copy /opt/kingsoft/wps-office/office6/dicts/es_ES
+
+To see movies in one line terminal:
+```bash
+$ peerflix http://url-del-torrent.torrent --vlc -d
+```
+
+### Utils
++ TLP Advanced Power Manager
+
+
+### Curiosidades
+```bash
+$ cal 12 2015
+$ cowsay
+$ asciiquarium
+$ oneko -tofocus -bg grey -fg black -tora
+$ telnet towel.blinkenlights.nl 666
+$ screenfetch
+```
+
+
+# Arch install
 
 ---
 loadkeys es
@@ -34,3 +119,54 @@ arch-chroot /mnt
 nano /etc/hostname
 ---
 ln -s /usr/share/zoneinfo/America/Buenos_Aires /etc/localtime
+---
+nano /etc/locale.conf
+LANG=es_AR.UTF-8
+---
+nano /etc/locale.gen
+locale-gen
+---
+nano /etc/vconsole.conf
+KEYMAP=es
+---
+grub-install /dev/sda
+---
+grub-mkconfig -o /boot/grub/grub.cfg
+---
+mkinitcpio -p linux
+---
+passwd
+---
+exit
+---
+umount /mnt/{boot,home,}
+---
+reboot
+---
+---
+systemctl start NetworkManager.service
+systemctl enable NetworkManager.service
+---
+useradd -m -g users -G audio,lp,optical,storage,video,wheel,games,power,scanner -s /bin/bash user
+passwd user
+---
+nano /etc/sudoers
+%wheel ALL=(ALL) ALL:
+---
+sudo nmcli dev wifi connect "SSID" password "contraseña"
+sudo pacman -Syu
+
+## Driver
+sudo pacman -S xorg-server xorg-xinit xorg-utils xorg-server-utils mesa mesa-demos xf86-video-intel xorg-twm xorg-xclock xterm
+
+## Openbox
+sudo pacman -S openbox
+$ mkdir -p ~/.config/openbox
+$ cp /etc/xdg/openbox/{rc.xml,menu.xml,autostart,environment} ~/.config/openbox
+
+sudo pacman -S obconf menumaker tint2 network-manager-applet nitrogen lxappearance slim
+
+nano .xinitrc
+exec openbox-session
+
+sudo systemctl enable slim.service
