@@ -8,6 +8,7 @@
 + http://derekwyatt.org/vim/tutorials/novice/ 
 + http://vim.rtorr.com/lang/es_es/
 + http://juanjoalvarez.net/es/detail/2009/jun/25/vim-en-2-minutos/
++ http://benmccormick.org/2014/07/21/learning-vim-in-2014-getting-more-from-vim-with-plugins/
 
 Vundle -> To install from command line: vim +PluginInstall +qall
 
@@ -17,7 +18,7 @@ $ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
 Reemplazar tabs por espacios: **:%s/\t/    /gc**
 
--- Modo Normal
+## Modo Normal
 
 
 j bajar un número de línea, es decir, líneas separadas por un retorno de carro.

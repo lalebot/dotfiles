@@ -15,9 +15,16 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 NeoBundle 'Shougo/neobundle.vim'
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'airblade/vim-gitgutter' " Git
+NeoBundle 'plasticboy/vim-markdown'
 NeoBundle 'nathanaelkane/vim-indent-guides'
 NeoBundle 'honza/vim-snippets'
 NeoBundle 'scrooloose/syntastic'     " muestra errores de syntaxis
+" NeoBundle 'Xuyuanp/nerdtree-git-plugin'
+NeoBundle 'kien/ctrlp.vim'
+NeoBundle 'tpope/vim-commentary'
+NeoBundle 'reedes/vim-thematic'
+NeoBundle 'Valloric/YouCompleteMe'
+NeoBundle 'easymotion/vim-easymotion'
 
 NeoBundle 'bling/vim-airline'
 let g:airline#extensions#tabline#enabled = 1
@@ -29,6 +36,7 @@ NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'morhetz/gruvbox'
 "NeoBundle 'shinchu/lightline-gruvbox'
 NeoBundle 'jpo/vim-railscasts-theme'
+NeoBundle 'chriskempson/base16'
 
 call neobundle#end()
 
@@ -53,7 +61,7 @@ set cc=80
 set history=1000         " remember more commands and search history
 set undolevels=1000      " use many muchos levels of undo
 set laststatus=2
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc,*/.git/*
+set wildignore+=*.so,*.swp,*.zip,*.pyc,*/.git/*
 set title                " change the terminal's title
 set visualbell           " don't beep
 set noerrorbells         " don't beep
@@ -115,23 +123,15 @@ let $PYTHONPATH='/usr/lib/python3.4/site-packages'
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Bundles"
+" Bundles Config
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " NERDtree
 autocmd vimenter * NERDTree
 
-" Color lightline-gruvbox'"
-"let g:lightline = {}
-"let g:lightline.colorscheme = 'gruvbox'
-
-" Color bubblegum
 "colorscheme bubblegum-256-dark
 "let g:airline_theme = "bubblegum"
-"set guifont=Terminess\ Powerline\ 11
 
-" Color Solarized
 "colorscheme solarized
-"set background=dark
 "let g:airline_theme = "solarized"
 "set guifont=Droid\ Sans\ Mono\ for\ Powerline\ 10
 
@@ -145,6 +145,10 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme = 'gruvbox'
 
 set background=dark
+set guifont=Terminess\ Powerline\ 11
+
+" Markdown
+let g:markdown_fenced_languages = ['coffee', 'css', 'erb=eruby', 'javascript', 'js=javascript', 'json=javascript', 'ruby', 'sass', 'xml']
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " REMAP
@@ -165,3 +169,6 @@ nnoremap <silent> si :NERDTreeToggle<cr>
 " Remap para manejar los buffers
 nnoremap <silent> sa :bprevious<cr>
 nnoremap <silent> sd :bnext<cr>
+
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP' " Para hacer paste desde el plugin
