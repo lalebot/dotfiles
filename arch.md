@@ -63,7 +63,7 @@ $ yaourt -S vim git sublimetext geany python perl godot
 
 ### Programs
 ```bash
-$ yaourt -S wps npm evince2-light clipit thunar thunar-archive-plugin xarchiver unrar zip unrar zip smplayer vlc megasync transmission mlocate xdiskusage firefox chromium scrot popcorntime xclip
+$ yaourt -S wps npm evince2-light clipit thunar thunar-archive-plugin xarchiver unrar zip unrar zip smplayer vlc megasync transmission mlocate xdiskusage firefox chromium scrot popcorntime xclip iptraf tlp tlp-rdw
 ```
 
 To set default lenguaje in wps copy /opt/kingsoft/wps-office/office6/dicts/es_ES
@@ -72,10 +72,6 @@ To see movies in one line terminal:
 ```bash
 $ peerflix http://url-del-torrent.torrent --vlc -d
 ```
-
-### Utils
-+ TLP Advanced Power Manager
-
 
 ### Curiosidades
 ```bash
