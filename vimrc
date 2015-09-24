@@ -26,6 +26,7 @@ NeoBundle 'reedes/vim-thematic'
 " NeoBundle 'Valloric/YouCompleteMe'
 NeoBundle 'easymotion/vim-easymotion'
 NeoBundle 'Yggdroot/indentLine'
+NeoBundle 'powerman/vim-plugin-autosess'
 
 NeoBundle 'bling/vim-airline'
 let g:airline#extensions#tabline#enabled = 1
@@ -125,12 +126,15 @@ set mouse=a   " Enable mouse usage (all modes)
 let $PYTHONPATH='/usr/lib/python3.4/site-packages'
 """""""""""
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Funciones
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Bundles Config
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " NERDtree
-autocmd vimenter * NERDTree
+" autocmd vimenter * NERDTree
 let NERDTreeWinSize = 20
 " let NERDTreeShowHidden = 1
 

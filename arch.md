@@ -61,12 +61,12 @@ Icons: ultra-flattr - moka - uniform - dalisha - numix
 
 ### Dev
 ```bash
-$ yaourt -S vim git sublimetext geany python perl godot
+$ yaourt -S vim git sublimetext geany python perl godot-git
 ```
 
 ### Programs
 ```bash
-$ yaourt -S wps npm evince2-light clipit thunar thunar-archive-plugin xarchiver unrar zip unrar zip smplayer vlc megasync transmission mlocate xdiskusage firefox chromium scrot popcorntime xclip iptraf tlp tlp-rdw
+$ yaourt -S wps npm wget jre8-openjdk evince2-light clipit thunar thunar-archive-plugin xarchiver unrar unzip zip unrar zip smplayer vlc megasync transmission mlocate xdiskusage iceweasel chromium scrot popcorntime xclip iptraf tlp tlp-rdw alsa-utils alsa-ogg flashplugin
 ```
 
 To set default lenguaje in wps copy /opt/kingsoft/wps-office/office6/dicts/es_ES

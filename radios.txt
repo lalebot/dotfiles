@@ -1,0 +1,94 @@
+mplayer + radio
+
+Poriajhu
+http://audio.waag.org:8000/radioPoriajhu.ogg
+
+Radios AM (Amplitud modulada)
+
+
+AM 590 Continental
+http://69.31.54.135/CONTINENTAL?streamtheworld_user=1&nobuf=1329884727000
+
+AM 530 La voz
+http://200.68.81.65:8000/am530
+
+Am 570 Argentina
+http://am570.prodera.com.ar:8000/
+
+AM 990 Splendid
+http://pwstreaming.net:8616/;stream.nsv
+
+AM 1300 Identidad
+http://streamair.alsolnet.com:8080/radioidentidadvideo
+
+AM 630 Rivadavia
+http://streamer5.towebs.com:56661/rivadavia.mp3
+
+AM 750
+http://vivo.radioam750.com.ar:8000/vivo.mp3
+
+AM 1190 América
+http://wms1.streaming.redynet.com.ar/amamerica_22
+
+AM 550 Colonia
+http://wmserver3.aginet.com.ar:19043/
+
+AM 1120 Tango
+www.siliconmediatech.com
+
+AM 790 Mitre
+http://buecrplb01.cienradios.com.ar/Mitre790.aac
+
+Am 950 Radio9
+http://www.alsolnet.com/stream/radio9/listen.asx
+
+Las FM (Frecuencia modulada)
+
+
+FM 105.5 Los 40 principales
+http://69.31.54.140/LOS40_ARGENTINA?streamtheworld_user=1&nobuf=1330095739750
+
+FM 102.5 La colectiva
+http://200.20.113.50:8000/lacolectiva.ogg
+
+FM 90.3 Delta
+http://208.80.54.77/DELTA_903?streamtheworld_user=1&nobuf=1330093980718
+
+FM 99.1 Cadena 3
+http://active.telecomCDN.com/am700/am700
+
+FM 99.9 La 100
+http://buecrplb01.cienradios.com.ar/la100.mp3
+
+FM 95.5 Iser
+http://streaming.localhost.net.ar:8002/
+
+FM 90.7 Flores
+http://streaming.siliconmediatech.com/fmflores/stream.asx
+
+FM 90.9 Centro
+http://unicast.vdo3.com/radiolive_RadioCentro
+
+FM 88.7 La tribu
+http://vivo.fmlatribu.com:8000/latribu.mp3
+
+FM 87.5 Soldados
+http://wmserver3.aginet.com.ar/FMSOLDADOS
+
+FM 91.7 Urquiza
+http://www.fmurquiza.com/fmurquiza.asx
+
+FM 107.9 ESPN
+mms://a183.l1318236841.c13182.l.lm.akamaistream.net/D/183/13182/v0001/reflector:36841
+
+FM 95,1 Metro
+http://201.212.5.144/metro/.asx
+
+FM 95.9 Rock & Pop
+http://201.212.5.144/audio959-rockandpop
+
+Radio Kuarteto
+http://204.45.59.2:6002
+
+Radio Control mental (Reggae)
+http://streamingargentino1.com.ar:7516
