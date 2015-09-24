@@ -31,6 +31,9 @@ $ chsh -s /usr/bin/fish # Default fish
 $ curl -L github.com/oh-my-fish/oh-my-fish/raw/master/bin/install | sh # Install oh-my-fish
 $ omf theme agnoster
 
+$ curl -L git.io/wa | sh
+$ wa use agnoster #agnoster_powerline to your .dotfiles/init.fish
+
 $ yaourt -S python-powerline-git
 ```
 
