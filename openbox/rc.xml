@@ -288,6 +288,15 @@ cases. -->
         </startupnotify>
       </action>
     </keybind>
+    <keybind key="W-r">
+      <action name="Execute">
+        <command>transmission-gtk</command>
+        <startupnotify>
+          <enabled>yes</enabled>
+          <name>transmission</name>
+        </startupnotify>
+      </action>
+    </keybind>
     <keybind key="W-p">
       <action name="Execute">
         <command>popcorntime</command>
