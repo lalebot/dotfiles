@@ -9,7 +9,7 @@ setxkbmap es
 (sleep 1s && nitrogen --set-zoom-fill /home/lale/Mega/Wall/beam_me_up_scotty_by_imaginism.jpg) &
 (sleep 1s && tint2) &
 
-(sleep 2s && plank) &
+#(sleep 2s && plank) &
 
 #compton -cCGB
 #(sleep 3s && compton -bfCGb) &
@@ -20,10 +20,13 @@ setxkbmap es
 #(sleep 5s && pnmixer) &
 #(sleep 5s && numlockx) &
 (sleep 5s && clipit) &
+#(sleep 5s && wbar -bpress -above-desk -pos right -vbar -falfa 60.0) &
+
 
 #(sleep 10s && xscreensaver -no-splash) &
 
 (sleep 30s && sh $HOME/git/dotfiles/conky/conky-startup.sh) &
+(sleep 30s && mplayer http://audio.waag.org:8000/radioPoriajhu.ogg) &
 
 #(sleep 15s && oneko -tofocus -bg mintcream -fg black) &
 #(sleep 30s && megasync) &

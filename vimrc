@@ -27,6 +27,7 @@ NeoBundle 'reedes/vim-thematic'
 NeoBundle 'easymotion/vim-easymotion'
 NeoBundle 'Yggdroot/indentLine'
 NeoBundle 'powerman/vim-plugin-autosess'
+NeoBundle 'tpope/vim-fugitive'
 
 NeoBundle 'bling/vim-airline'
 let g:airline#extensions#tabline#enabled = 1
@@ -77,11 +78,12 @@ set swapfile
 
 set number               " Show the numbers on the left of the screen
 set ruler                " Show the column/row
+set cursorline                  " Highlight current line
 set showcmd              " Show the current command at the bottom
-set shortmess=I          " Don't show the startup message
 
+set shortmess=I          " Don't show the startup message
 set display+=lastline    " Always show the last line
-" set wildmenu           " Enhanced mode for command-line completion
+set wildmenu           " Enhanced mode for command-line completion
 
 set autoread             " Automatically re-read the file if it has changed
 set showmatch     " Show matching brackets.
@@ -93,7 +95,7 @@ set listchars=tab:>·,eol:¬,trail:~,extends:>,precedes:<,nbsp:%
 set wrap        " wrap lines
 set tabstop=4     " a tab is four spaces
 set shiftwidth=4  " number of spaces to use for autoindenting
-set noexpandtab
+set expandtab
 set softtabstop=4
 set autoindent    " always set autoindenting on
 set smartindent   " Use smarter defaults
@@ -114,7 +116,13 @@ set nofoldenable  " Disable foldin
 set pastetoggle=<F2>  " Use F2 when pasting to avoid applying indents 
 set mouse=a   " Enable mouse usage (all modes)
 
+set splitright                  " Puts new vsplit windows to the right of the current
+set splitbelow                  " Puts new split windows to the bottom of the current
+
+
+
 :syntax on
+
 
 """"""""
 " PYTHON
@@ -165,6 +173,8 @@ let g:ctrlp_cmd = 'CtrlP' " Para hacer paste desde el plugin
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " REMAP
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let mapleader = 'ñ'
+
 " Remap para manejar los paneles
 nmap <silent> sh <C-W>h
 nmap <silent> sj <C-W>j
@@ -184,3 +194,21 @@ nnoremap <silent> sd :bnext<cr>
 
 nnoremap <silent> <Leader>+ :exe "resize " . (winheight(0) * 3/2)<CR>
 nnoremap <silent> <Leader>- :exe "resize " . (winheight(0) * 2/3)<CR>
+
+
+    " Fugitive {
+        if isdirectory(expand("~/.vim/bundle/vim-fugitive/"))
+            nnoremap <silent> <leader>gs :Gstatus<CR>
+            nnoremap <silent> <leader>gd :Gdiff<CR>
+            nnoremap <silent> <leader>gc :Gcommit<CR>
+            nnoremap <silent> <leader>gb :Gblame<CR>
+            nnoremap <silent> <leader>gl :Glog<CR>
+            nnoremap <silent> <leader>gp :Git push<CR>
+            nnoremap <silent> <leader>gr :Gread<CR>
+            nnoremap <silent> <leader>gw :Gwrite<CR>
+            nnoremap <silent> <leader>ge :Gedit<CR>
+            " Mnemonic _i_nteractive
+            nnoremap <silent> <leader>gi :Git add -p %<CR>
+            nnoremap <silent> <leader>gg :SignifyToggle<CR>
+        endif
+    "}

@@ -174,3 +174,8 @@ nano .xinitrc
 exec openbox-session
 
 sudo systemctl enable slim.service
+
+### Hora Argentina
+sudo pacman -S ntp
+sudo ntpdate ar.pool.ntp.org
+sudo hwclock --systohc --utc
