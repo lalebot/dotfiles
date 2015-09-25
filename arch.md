@@ -76,6 +76,13 @@ To see movies in one line terminal:
 $ peerflix http://url-del-torrent.torrent --vlc -d
 ```
 
+### Instalar HP
+```bash
+$ yaourt -S cups-filters avahi ghostscript gsfonts hplip system-config-printer
+$ sudo systemctl start org.cups.cupsd.service
+$ systemctl-config-printer
+```
+
 ### Curiosidades
 ```bash
 $ cal 12 2015
@@ -89,6 +96,7 @@ $ screenfetch
 
 # Arch install
 
+```
 ---
 loadkeys es
 ---
@@ -179,3 +187,4 @@ sudo systemctl enable slim.service
 sudo pacman -S ntp
 sudo ntpdate ar.pool.ntp.org
 sudo hwclock --systohc --utc
+```
