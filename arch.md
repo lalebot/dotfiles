@@ -23,7 +23,31 @@ Terminal emulator
 $ yaourt -S tilda sakura konsole
 ```
 
-Fish shell
+### Openbox
+```bash
+$ yaourt -S openbox obmenu obmenu-generator obkey obconf lxappearance slim slim-themes xorg-xev menumaker nitrogen tint2 pnmixer xscreensaver gmrun lxrandr plank
+```
+
+Generate menu in desktop: 
+```bash
+$ menumaker - mmaker -vf OpenBox3
+```
+
+Theme: Numix theme - Numix solarized
+Icons: ultra-flattr - moka - uniform - dalisha - numix
+
+### Programs
+```bash
+$ yaourt -S thunar thunar-volman gvfs gvfs-afc thunar-archive-plugin xarchiver unrar unzip zip
+$ yaourt -S wps npm wget jre8-openjdk evince2-light clipit smplayer vlc feh megasync transmission mlocate xdiskusage iceweasel chromium scrot popcorntime xclip iptraf tlp tlp-rdw alsa-utils alsa-ogg flashplugin
+```
+
+### Dev
+```bash
+$ yaourt -S vim git sublimetext geany python perl godot-git
+```
+
+### Fish shell
 ```bash
 $ yaourt -S fish # Install fish
 $ chsh -s /usr/bin/fish # Default fish
@@ -39,42 +63,13 @@ $ yaourt -S python-powerline-git
 
 https://github.com/powerline/fonts
 
-Vim Bundle
+#### Vim Bundle
 ```bash
 $ curl https://raw.githubusercontent.com/Shougo/neobundle.vim/master/bin/install.sh > install.sh
 $ sh install.sh
 ```
 
-### Openbox
-```bash
-$ yaourt -S openbox obmenu obmenu-generator obkey obconf lxappearance slim slim-themes xorg-xev menumaker nitrogen tint2 pnmixer xscreensaver gmrun lxrandr plank
-```
 
-Generate menu in desktop: 
-```bash
-$ menumaker - mmaker -vf OpenBox3
-```
-
-Theme: Numix theme - Numix solarized
-Icons: ultra-flattr - moka - uniform - dalisha - numix
-
-
-### Dev
-```bash
-$ yaourt -S vim git sublimetext geany python perl godot-git
-```
-
-### Programs
-```bash
-$ yaourt -S wps npm wget jre8-openjdk evince2-light clipit thunar thunar-archive-plugin xarchiver unrar unzip zip unrar zip smplayer vlc megasync transmission mlocate xdiskusage iceweasel chromium scrot popcorntime xclip iptraf tlp tlp-rdw alsa-utils alsa-ogg flashplugin
-```
-
-To set default lenguaje in wps copy /opt/kingsoft/wps-office/office6/dicts/es_ES
-
-To see movies in one line terminal:
-```bash
-$ peerflix http://url-del-torrent.torrent --vlc -d
-```
 
 ### Instalar HP
 ```bash
@@ -84,6 +79,12 @@ $ systemctl-config-printer
 ```
 
 ### Curiosidades
+To set default lenguaje in wps copy /opt/kingsoft/wps-office/office6/dicts/es_ES
+
+To see movies in one line terminal:
+```bash
+$ peerflix http://url-del-torrent.torrent --vlc -d
+```
 ```bash
 $ cal 12 2015
 $ cowsay
