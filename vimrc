@@ -17,17 +17,17 @@ NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'airblade/vim-gitgutter' " Git
 NeoBundle 'plasticboy/vim-markdown'
 NeoBundle 'nathanaelkane/vim-indent-guides'
-NeoBundle 'honza/vim-snippets'
+" NeoBundle 'honza/vim-snippets'
 NeoBundle 'scrooloose/syntastic'     " muestra errores de syntaxis
 " NeoBundle 'Xuyuanp/nerdtree-git-plugin'
 NeoBundle 'kien/ctrlp.vim'
-NeoBundle 'tpope/vim-commentary'
-NeoBundle 'reedes/vim-thematic'
+" NeoBundle 'tpope/vim-commentary'
+" NeoBundle 'reedes/vim-thematic'
 " NeoBundle 'Valloric/YouCompleteMe'
-NeoBundle 'easymotion/vim-easymotion'
-NeoBundle 'Yggdroot/indentLine'
-NeoBundle 'powerman/vim-plugin-autosess'
-NeoBundle 'tpope/vim-fugitive'
+" NeoBundle 'easymotion/vim-easymotion'
+" NeoBundle 'Yggdroot/indentLine'
+" NeoBundle 'powerman/vim-plugin-autosess'
+" NeoBundle 'tpope/vim-fugitive'
 
 NeoBundle 'bling/vim-airline'
 let g:airline#extensions#tabline#enabled = 1
@@ -35,11 +35,11 @@ let g:airline_powerline_fonts = 1
 
 " Color schemes
 NeoBundle 'baskerville/bubblegum'
-NeoBundle 'altercation/vim-colors-solarized'
+"NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'morhetz/gruvbox'
 "NeoBundle 'shinchu/lightline-gruvbox'
-NeoBundle 'jpo/vim-railscasts-theme'
-NeoBundle 'chriskempson/base16'
+"NeoBundle 'jpo/vim-railscasts-theme'
+"NeoBundle 'chriskempson/base16'
 
 call neobundle#end()
 
@@ -74,6 +74,7 @@ set noerrorbells         " don't beep
 set hidden      " Hide buffers when they are abandoned
 
 set nobackup
+set writebackup
 set swapfile
 
 set number               " Show the numbers on the left of the screen
@@ -123,6 +124,21 @@ set splitbelow                  " Puts new split windows to the bottom of the cu
 
 :syntax on
 
+" Setup folder structure
+if !isdirectory(expand('~/.vim/undo/', 1))
+    silent call mkdir(expand('~/.vim/undo', 1), 'p')
+endif
+if !isdirectory(expand('~/.vim/backup/', 1))
+    silent call mkdir(expand('~/.vim/backup', 1), 'p')
+endif
+if !isdirectory(expand('~/.vim/swap/', 1))
+    silent call mkdir(expand('~/.vim/swap', 1), 'p')
+endif
+
+set undodir=~/.vim/undo//
+set backupdir=~/.vim/backup//
+set directory=~/.vim/swap//
+
 
 """"""""
 " PYTHON
@@ -141,10 +157,6 @@ let $PYTHONPATH='/usr/lib/python3.4/site-packages'
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Bundles Config
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" NERDtree
-" autocmd vimenter * NERDTree
-let NERDTreeWinSize = 20
-" let NERDTreeShowHidden = 1
 
 colorscheme bubblegum-256-dark
 let g:airline_theme = "bubblegum"
@@ -185,8 +197,6 @@ nmap <silent> sl <C-W>l
 nnoremap <silent> sn :tabp<cr>
 nnoremap <silent> sm :tabn<cr>
 
-" Ocultar/desocultar NERDtree
-nnoremap <silent> si :NERDTreeToggle<cr>
 
 " Remap para manejar los buffers
 nnoremap <silent> sa :bprevious<cr>
@@ -210,5 +220,25 @@ nnoremap <silent> <Leader>- :exe "resize " . (winheight(0) * 2/3)<CR>
             " Mnemonic _i_nteractive
             nnoremap <silent> <leader>gi :Git add -p %<CR>
             nnoremap <silent> <leader>gg :SignifyToggle<CR>
+        endif
+    "}
+
+    " NerdTree {
+        if isdirectory(expand("~/.vim/bundle/nerdtree"))
+            nnoremap <silent> si :NERDTreeToggle<cr>
+            " map <C-e> <plug>NERDTreeTabsToggle<CR>
+            map <leader>e :NERDTreeFind<CR>
+            nmap <leader>nt :NERDTreeFind<CR>
+
+            let NERDTreeShowBookmarks=1
+            let NERDTreeIgnore=['\.py[cd]$', '\~$', '\.swo$', '\.swp$', '^\.git$', '^\.hg$', '^\.svn$', '\.bzr$']
+            let NERDTreeChDirMode=0
+            let NERDTreeQuitOnOpen=1
+            let NERDTreeMouseMode=2
+            let NERDTreeShowHidden=1
+            let NERDTreeKeepTreeInNewTab=1
+            let g:nerdtree_tabs_open_on_gui_startup=0
+
+            let NERDTreeWinSize = 20
         endif
     "}
