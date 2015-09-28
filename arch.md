@@ -28,7 +28,7 @@ $ yaourt -S tilda sakura konsole
 $ yaourt -S openbox obmenu obmenu-generator obkey obconf lxappearance slim slim-themes xorg-xev menumaker nitrogen tint2 pnmixer xscreensaver gmrun lxrandr plank
 ```
 
-Generate menu in desktop: 
+Generate menu in desktop:
 ```bash
 $ menumaker - mmaker -vf OpenBox3
 ```
