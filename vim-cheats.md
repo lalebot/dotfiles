@@ -212,7 +212,6 @@ ma Hago una marca y la guardo en la letra a
 umero mas comando y se lo repite
 10 i =  Esc ==================== 
 % voy al otro par de la llave (espejo)
-Macros !!!!
 
 / Buscar n navegar adelante N navega adelante
 ? Busco para atras
@@ -238,9 +237,17 @@ gg al principio uv selecciono G final
 
 Se puede seleccionar y luego ! y poner un comando unix para que se ejecute en esa selección.
 
+#### Macros
 q (letra) grabo macro q
 @ (letra) se ejecuta el macro 
 @@ se ejecuta la ultima macro
+:reg a ver el contenido del macro a
+:put a pegar el macro en a
+
+#### Variables
+:let i=1
+ctrl-r i pego el contenido de la variable i
+:let i+=1
 
 ctrl W me muevo con NERDtree
 
@@ -248,6 +255,10 @@ ctrl W me muevo con NERDtree
 :vspl divido horizontalmente
 
 vimdiff dp aceptar los cambios que se ven
+
+#### Registros
+"1p guarda lo que tenemos para pegar en el registro 1
+"+ es el portapapeles del sistema
 
 
 Aprende algunos verbos

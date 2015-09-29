@@ -62,6 +62,7 @@ $ yaourt -S python-powerline-git
 ```
 
 https://github.com/powerline/fonts
+https://github.com/ryanoasis/nerd-fonts
 
 #### Vim Bundle
 ```bash
