@@ -9,6 +9,7 @@
 + http://vim.rtorr.com/lang/es_es/
 + http://juanjoalvarez.net/es/detail/2009/jun/25/vim-en-2-minutos/
 + http://benmccormick.org/2014/07/21/learning-vim-in-2014-getting-more-from-vim-with-plugins/
++ http://blog.desdelinux.net/viernes-terminal-pensando-vim/
 
 Vundle -> To install from command line: vim +PluginInstall +qall
 
@@ -47,7 +48,7 @@ t{carácter} va hacia adelante y se para en una columna antes del carácter.
 T{carácter} lo mismo que el anterior pero en dirección contraria.
 ; repite la última búsqueda de carácter.
 , da la vuelta a la última búsqueda.
-																										
+
 
 e Me muevo al final de la próxima palabra
 w Me muevo a la próxima palabra
@@ -202,9 +203,8 @@ ma Hago una marca y la guardo en la letra a
 `] : ir a la posición final del último cambio o copia (yank).
 `< : ir a la posición inicial de la última selección visual.
 `> : ir a l aposición final de la última selección visual.
-							
-##############################################################
 
+---
 
 :w Guardar
 :o abrir un archivo
