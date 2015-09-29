@@ -94,10 +94,10 @@ s nos deja en el modo insertar.
 ~ capitaliza 
 
 
--- i Modo inserción
+## i Modo inserción
 <ctrl-v>181 inserta un caracter especial
 
--- v Modo visual
+## v Modo visual
 o cambio de dirección desde donde estoy haciendo la selección.
 f busca ; sigue , vuelve
 V modo visual que selecciona columnas
@@ -106,7 +106,7 @@ u/U cambia a mayúscula/minuscula
 gv repita la seleccion anterior
 
 
--- Modo comando
+## Modo comando
 :x / :xa guardar y salir
 :w guardar
 :q salir
