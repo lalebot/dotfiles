@@ -17,17 +17,19 @@ NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'airblade/vim-gitgutter' " Git
 NeoBundle 'plasticboy/vim-markdown'
 NeoBundle 'nathanaelkane/vim-indent-guides'
+NeoBundle 'Shougo/neocomplcache.vim'
 " NeoBundle 'honza/vim-snippets'
-NeoBundle 'scrooloose/syntastic'     " muestra errores de syntaxis
+NeoBundle 'scrooloose/syntastic'
 " NeoBundle 'Xuyuanp/nerdtree-git-plugin'
 NeoBundle 'kien/ctrlp.vim'
-" NeoBundle 'tpope/vim-commentary'
+NeoBundle 'tpope/vim-commentary'
 " NeoBundle 'reedes/vim-thematic'
 " NeoBundle 'Valloric/YouCompleteMe'
-" NeoBundle 'easymotion/vim-easymotion'
+NeoBundle 'easymotion/vim-easymotion'
 " NeoBundle 'Yggdroot/indentLine'
 " NeoBundle 'powerman/vim-plugin-autosess'
-" NeoBundle 'tpope/vim-fugitive'
+NeoBundle 'tpope/vim-fugitive'
+NeoBundle 'myusuf3/numbers.vim'
 
 NeoBundle 'bling/vim-airline'
 let g:airline#extensions#tabline#enabled = 1
@@ -179,8 +181,6 @@ set guifont=Terminess\ Powerline\ 11
 " Markdown
 let g:markdown_fenced_languages = ['coffee', 'css', 'erb=eruby', 'javascript', 'js=javascript', 'json=javascript', 'ruby', 'sass', 'xml']
 
-let g:ctrlp_map = '<c-p>'
-let g:ctrlp_cmd = 'CtrlP' " Para hacer paste desde el plugin
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " REMAP
@@ -242,3 +242,73 @@ nnoremap <silent> <Leader>- :exe "resize " . (winheight(0) * 2/3)<CR>
             let NERDTreeWinSize = 20
         endif
     "}
+
+    " CtrlP {
+            let g:ctrlp_working_path_mode = 'ra'
+            let g:ctrlp_map = '<c-p>'
+            let g:ctrlp_cmd = 'CtrlP' " Para hacer paste desde el plugin
+    "}
+
+    " Numbers{
+        nnoremap <F3> :NumbersToggle<CR>
+        nnoremap <F4> :NumbersOnOff<CR>
+    "}
+
+    " neocomplcache{
+        let g:acp_enableAtStartup = 0
+        let g:neocomplete#enable_at_startup = 1
+        let g:neocomplete#enable_smart_case = 1
+        let g:neocomplete#enable_auto_delimiter = 1
+        let g:neocomplete#max_list = 15
+        let g:neocomplete#force_overwrite_completefunc = 1
+
+        let g:neocomplcache_dictionary_filetype_lists = {
+            \ 'default' : '',
+            \ 'vimshell' : $HOME.'/.vimshell_hist',
+            \ 'scheme' : $HOME.'/.gosh_completions'
+        \ }
+
+        if !exists('g:neocomplcache_keyword_patterns')
+            let g:neocomplcache_keyword_patterns = {}
+        endif
+        let g:neocomplcache_keyword_patterns['default'] = '\h\w*'
+        " Plugin key-mappings.
+        inoremap <expr><C-g>     neocomplcache#undo_completion()
+        inoremap <expr><C-l>     neocomplcache#complete_common_string()
+        " Recommended key-mappings.
+        " <CR>: close popup and save indent.
+        inoremap <silent> <CR> <C-r>=<SID>my_cr_function()<CR>
+        function! s:my_cr_function()
+          return neocomplcache#smart_close_popup() . "\<CR>"
+          " For no inserting <CR> key.
+          "return pumvisible() ? neocomplcache#close_popup() : "\<CR>"
+        endfunction
+        " <TAB>: completion.
+        inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
+        " <C-h>, <BS>: close popup and delete backword char.
+        inoremap <expr><C-h> neocomplcache#smart_close_popup()."\<C-h>"
+        inoremap <expr><BS> neocomplcache#smart_close_popup()."\<C-h>"
+        inoremap <expr><C-y>  neocomplcache#close_popup()
+        inoremap <expr><C-e>  neocomplcache#cancel_popup()
+    "}
+
+    " Tabularize {
+        if isdirectory(expand("~/.vim/bundle/tabular"))
+            nmap <Leader>a& :Tabularize /&<CR>
+            vmap <Leader>a& :Tabularize /&<CR>
+            nmap <Leader>a= :Tabularize /^[^=]*\zs=<CR>
+            vmap <Leader>a= :Tabularize /^[^=]*\zs=<CR>
+            nmap <Leader>a=> :Tabularize /=><CR>
+            vmap <Leader>a=> :Tabularize /=><CR>
+            nmap <Leader>a: :Tabularize /:<CR>
+            vmap <Leader>a: :Tabularize /:<CR>
+            nmap <Leader>a:: :Tabularize /:\zs<CR>
+            vmap <Leader>a:: :Tabularize /:\zs<CR>
+            nmap <Leader>a, :Tabularize /,<CR>
+            vmap <Leader>a, :Tabularize /,<CR>
+            nmap <Leader>a,, :Tabularize /,\zs<CR>
+            vmap <Leader>a,, :Tabularize /,\zs<CR>
+            nmap <Leader>a<Bar> :Tabularize /<Bar><CR>
+            vmap <Leader>a<Bar> :Tabularize /<Bar><CR>
+        endif
+    " }
