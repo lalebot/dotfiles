@@ -20,7 +20,7 @@ $ yaourt -S base base-devel samba htop tmux
 ### Shell
 Terminal emulator
 ```bash
-$ yaourt -S tilda sakura konsole
+$ yaourt -S tilda terminator sakura
 ```
 
 ### Openbox
