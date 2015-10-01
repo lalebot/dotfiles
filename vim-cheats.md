@@ -106,6 +106,10 @@ ctrl v modo de seleccion de columnas
 u/U cambia a mayúscula/minuscula
 gv repita la seleccion anterior
 
+viB Selecciona todo lo que este dentro de las llaves
+[control] v e5j C [escribes el texto] [esc] [esc]
+Y en este entras al selector visual por bloques controlv, avanzo al final de la palabra, y 5 lineas abajo 5j, borro la palabra con C escribo el texto a sustituir y presiono Esc Esc.
+
 
 ## Modo comando
 :x / :xa guardar y salir
@@ -141,6 +145,7 @@ $ última línea del archivo..
 :![comando de shell] nos permite ejecutar comandos de nuestra shell como :!ls.
 @: repetir el ultimo comando, se ejecuta en modo normal.
 
+: 3,$sort De la linea 3 hasta el final del documento ordenalo
 
 ### Buffers
 
@@ -210,7 +215,7 @@ ma Hago una marca y la guardo en la letra a
 :o abrir un archivo
 
 umero mas comando y se lo repite
-10 i =  Esc ==================== 
+10 i =  Esc ====================
 % voy al otro par de la llave (espejo)
 
 / Buscar n navegar adelante N navega adelante
@@ -226,6 +231,7 @@ comienzo a escribit aprieto ctrl p (atrás) ctrl n (adelante) busqueda de antes 
 
 
 :%s/algo/alga/g reemplazar
+:.,$g/#/d de la linea actual . hasta el final del documento $ busca los numeral # y eliminalos d
 Puedo marcar y luego reemplazar en esa zona
 
 identar =
