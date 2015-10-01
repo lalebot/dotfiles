@@ -34,7 +34,8 @@ alias md 'mkdir -p'
 alias g git
 alias gs="git status"
 alias gx gitx
-alias gpom="git pull origin master"
+alias gpom="git push origin master"
+alias gpl="git pull"
 alias ga="git add"
 alias gaa="git add ."
 alias gca="git commit -a -m"
