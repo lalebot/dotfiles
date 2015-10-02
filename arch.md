@@ -52,9 +52,11 @@ $ yaourt -S vim git sublimetext geany python perl godot-git
 $ yaourt -S fish # Install fish
 $ chsh -s /usr/bin/fish # Default fish
 
-$ curl -L github.com/oh-my-fish/oh-my-fish/raw/master/bin/install | sh # Install oh-my-fish
+# oh-my-fish
+$ curl -L github.com/oh-my-fish/oh-my-fish/raw/master/bin/install | sh
 $ omf theme agnoster
 
+# wa
 $ curl -L git.io/wa | sh
 $ wa use agnoster #agnoster_powerline to your .dotfiles/init.fish
 

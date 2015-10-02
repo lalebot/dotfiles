@@ -1,17 +1,10 @@
+################################################################################
 # Path to your oh-my-fish.
-set fish_path $HOME/.oh-my-fish
-
-# Path to your custom folder (default path is ~/.oh-my-fish/custom)
-#set fish_custom $HOME/dotfiles/oh-my-fish
-
+set -g OMF_PATH $HOME/.local/share/omf
 # Load oh-my-fish configuration.
-. $fish_path/oh-my-fish.fish
+source $OMF_PATH/init.fish
 
-# Custom plugins and themes may be added to ~/.oh-my-fish/custom
-# Plugins and themes can be found at https://github.com/oh-my-fish/
-Theme 'agnoster'
-Plugin 'theme'
-
+################################################################################
 set fish_greeting "Ahora a hacer algo magníficou..."
 
 # ALIAS
