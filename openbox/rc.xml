@@ -281,7 +281,7 @@ cases. -->
     </keybind>
     <keybind key="W-t">
       <action name="Execute">
-        <command>sakura</command>
+        <command>terminator -m -l 21 -T Terminator-Apocalipsis</command>
         <startupnotify>
           <enabled>yes</enabled>
           <name>terminal</name>
@@ -290,10 +290,10 @@ cases. -->
     </keybind>
     <keybind key="W-r">
       <action name="Execute">
-        <command>transmission-gtk</command>
+        <command>sakura</command>
         <startupnotify>
           <enabled>yes</enabled>
-          <name>transmission</name>
+          <name>sakura</name>
         </startupnotify>
       </action>
     </keybind>

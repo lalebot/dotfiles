@@ -1,4 +1,5 @@
 [global_config]
+  enabled_plugins = LaunchpadCodeURLHandler, APTURLHandler, LaunchpadBugURLHandler
   focus = system
   suppress_multiple_term_dialog = True
   title_transmit_bg_color = "#d30102"
@@ -7,11 +8,56 @@
   [[default]]
     [[[child1]]]
       parent = window0
-      profile = OneDark
+      profile = solarized-dark
       type = Terminal
     [[[window0]]]
       parent = ""
       type = Window
+  [[21]]
+    [[[child0]]]
+      fullscreen = False
+      last_active_term = 4981fb2c-dc92-4635-b453-65b08c5fccac
+      last_active_window = True
+      maximised = True
+      order = 0
+      parent = ""
+      position = 0:0
+      size = 1368, 713
+      title = Terminator-Apocalipsis
+      type = Window
+    [[[child1]]]
+      order = 0
+      parent = child0
+      position = 386
+      ratio = 0.282529239766
+      type = HPaned
+    [[[child2]]]
+      order = 0
+      parent = child1
+      position = 356
+      ratio = 0.5
+      type = VPaned
+    [[[terminal3]]]
+      order = 0
+      parent = child2
+      profile = solarized-dark
+      type = Terminal
+      uuid = ae2e3f6f-84da-4eb5-ad7d-6402b649cdcb
+      command = ''
+    [[[terminal4]]]
+      command = "htop"
+      order = 1
+      parent = child2
+      profile = OneDark
+      type = Terminal
+      uuid = 38ba49b0-bb39-4ff2-9c92-a520b05e9517
+    [[[terminal5]]]
+      order = 1
+      parent = child1
+      profile = solarized-dark
+      type = Terminal
+      uuid = 4981fb2c-dc92-4635-b453-65b08c5fccac
+      command = 'cd ~/git; fish'
 [plugins]
 [profiles]
   [[default]]
@@ -43,12 +89,21 @@
   [[solarized-dark]]
     background_color = "#002b36"
     background_image = None
-    cursor_color = "#eee8d5"
+    cursor_color = "#bbbbbb"
+    font = Inconsolata 11
     foreground_color = "#eee8d5"
     palette = "#073642:#dc322f:#859900:#b58900:#268bd2:#d33682:#2aa198:#eee8d5:#002b36:#cb4b16:#586e75:#657b83:#839496:#6c71c4:#93a1a1:#fdf6e3"
+    scrollbar_position = hidden
+    show_titlebar = False
+    use_system_font = False
   [[solarized-light]]
     background_color = "#eee8d5"
     background_image = None
+    copy_on_selection = True
     cursor_color = "#002b36"
+    font = Inconsolata Medium 11
     foreground_color = "#002b36"
     palette = "#073642:#dc322f:#859900:#b58900:#268bd2:#d33682:#2aa198:#eee8d5:#002b36:#cb4b16:#586e75:#657b83:#839496:#6c71c4:#93a1a1:#fdf6e3"
+    scrollbar_position = hidden
+    show_titlebar = False
+    use_system_font = False
