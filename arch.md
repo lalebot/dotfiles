@@ -34,7 +34,7 @@ $ menumaker - mmaker -vf OpenBox3
 ```
 
 Theme: Numix theme - Numix solarized
-Icons: ultra-flattr - moka - uniform - dalisha - numix
+Icons: flattr - ultra-flattr - super-flat-remix - area - moka - uniform - dalisha - numix
 
 ### Programs
 ```bash
