@@ -9,6 +9,8 @@ set fish_greeting "Ahora a hacer algo magníficou..."
 
 # ALIAS
 
+alias u 'yaourt -Syu'
+
 alias cd.. 'cd ..'
 alias .. 'cd ..'
 alias ... 'cd ../..'
