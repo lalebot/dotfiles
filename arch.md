@@ -188,7 +188,15 @@ exec openbox-session
 sudo systemctl enable slim.service
 
 ### Hora Argentina
+```
 sudo pacman -S ntp
 sudo ntpdate ar.pool.ntp.org
 sudo hwclock --systohc --utc
 ```
+
+### Consumo de internet
+```
+$ sudo iwconfig
+$ sudo nethogs wlp2s0
+```
+
