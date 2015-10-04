@@ -23,7 +23,7 @@
       parent = ""
       position = 0:0
       size = 1368, 713
-      title = Terminator-Apocalipsis
+      title = Que-bonita-terminal
       type = Window
     [[[child1]]]
       order = 0
@@ -45,7 +45,7 @@
       uuid = ae2e3f6f-84da-4eb5-ad7d-6402b649cdcb
       command = ''
     [[[terminal4]]]
-      command = "htop"
+      command = ""
       order = 1
       parent = child2
       profile = OneDark
