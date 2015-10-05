@@ -20,6 +20,7 @@ $ git config --global credential.helper cache # cache de credenciales
 ```bash
 $ git init # Crear un proyecto en Git de manera local
 $ git clone git@gitlab.com:lalebot/prom-pip.git # Crear un proyecto en Git de manera remota
+$ git clone https://lalebot@gitlab.com/lalebot/personal.git # Clonar desde https de un directorio privado
 ```
 
 ### Archivos
