@@ -97,6 +97,19 @@ $ telnet towel.blinkenlights.nl 666
 $ screenfetch
 ```
 
+#### Samba
+```
+sudo pacman -S samba smbclient
+sudo cp /etc/samba/smb.conf.default /etc/samba/smb.conf
+sudo systemclt start smbd nmbd
+# reiniciar
+sudo smbpasswd -a usuario
+sudo nano /etc/samba/smb.conf
+    security = user
+    workgroup = CASA
+    [Carpeta compartida]
+```
+
 
 # Arch install
 
