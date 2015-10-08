@@ -110,6 +110,10 @@ sudo nano /etc/samba/smb.conf
     [Carpeta compartida]
 ```
 
+```
+sudo mount -t cifs -o username=User,password=pass //ip/utorrent /mnt/win7
+```
+
 
 # Arch install
 
