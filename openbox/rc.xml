@@ -281,10 +281,20 @@ cases. -->
     </keybind>
     <keybind key="W-t">
       <action name="Execute">
-        <command>terminator -m -l 21 -T Terminator-Apocalipsis</command>
+        <command>terminator -m -l 21 -T Terminilla</command>
         <startupnotify>
           <enabled>yes</enabled>
           <name>terminal</name>
+        </startupnotify>
+      </action>
+    </keybind>
+    <keybind key="W-ñ">
+      <action name="Execute">
+        <command>mplayer http://audio.waag.org:8000/radioPoriajhu.ogg -cache 2000 -cache-min 50
+</command>
+        <startupnotify>
+          <enabled>yes</enabled>
+          <name>Radio</name>
         </startupnotify>
       </action>
     </keybind>
@@ -294,6 +304,15 @@ cases. -->
         <startupnotify>
           <enabled>yes</enabled>
           <name>sakura</name>
+        </startupnotify>
+      </action>
+    </keybind>
+    <keybind key="W-l">
+      <action name="Execute">
+        <command>killall mplayer</command>
+        <startupnotify>
+          <enabled>yes</enabled>
+          <name>killradio</name>
         </startupnotify>
       </action>
     </keybind>
