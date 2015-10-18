@@ -38,7 +38,7 @@ Icons: flattr - ultra-flattr - super-flat-remix - area - moka - uniform - dalish
 
 ### Programs
 ```bash
-$ yaourt -S thunar thunar-volman gvfs gvfs-afc thunar-archive-plugin xarchiver unrar unzip zip
+$ yaourt -S thunar thunar-volman gvfs gvfs-afc gvfs-smb thunar-archive-plugin xarchiver unrar unzip zip
 $ yaourt -S wps npm wget jre8-openjdk evince2-light clipit smplayer vlc feh megasync transmission mlocate xdiskusage iceweasel chromium scrot popcorntime xclip iptraf tlp tlp-rdw alsa-utils alsa-ogg flashplugin
 ```
 

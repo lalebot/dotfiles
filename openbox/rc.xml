@@ -288,9 +288,9 @@ cases. -->
         </startupnotify>
       </action>
     </keybind>
-    <keybind key="W-ñ">
+    <keybind key="W-l">
       <action name="Execute">
-        <command>mplayer http://audio.waag.org:8000/radioPoriajhu.ogg -cache 2000 -cache-min 50
+        <command>mplayer http://audio.waag.org:8000/radioPoriajhu.ogg -cache 1000 -cache-min 20
 </command>
         <startupnotify>
           <enabled>yes</enabled>
@@ -307,7 +307,7 @@ cases. -->
         </startupnotify>
       </action>
     </keybind>
-    <keybind key="W-l">
+    <keybind key="W-k">
       <action name="Execute">
         <command>killall mplayer</command>
         <startupnotify>
