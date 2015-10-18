@@ -33,13 +33,13 @@ Generate menu in desktop:
 $ menumaker - mmaker -vf OpenBox3
 ```
 
-Theme: Numix theme - Numix solarized
+Theme: Numix theme - Numix solarized - arc
 Icons: flattr - ultra-flattr - super-flat-remix - area - moka - uniform - dalisha - numix
 
 ### Programs
 ```bash
 $ yaourt -S thunar thunar-volman gvfs gvfs-afc gvfs-smb thunar-archive-plugin xarchiver unrar unzip zip
-$ yaourt -S wps npm wget jre8-openjdk evince2-light clipit smplayer vlc feh megasync transmission mlocate xdiskusage iceweasel chromium scrot popcorntime xclip iptraf tlp tlp-rdw alsa-utils alsa-ogg flashplugin
+$ yaourt -S wps npm wget nethogs jre8-openjdk evince2-light clipit smplayer vlc feh megasync transmission mlocate xdiskusage iceweasel chromium scrot popcorntime xclip iptraf tlp tlp-rdw alsa-utils alsa-ogg flashplugin
 ```
 
 ### Dev
