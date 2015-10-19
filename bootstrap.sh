@@ -9,6 +9,8 @@ rm ~/.config/openbox/rc.xml
 ln -s ~/git/dotfiles/openbox/rc.xml ~/.config/openbox/rc.xml
 rm ~/.config/openbox/menu.xml
 ln -s ~/git/dotfiles/openbox/menu.xml ~/.config/openbox/menu.xml
+rm ~/.config/tint2/tint2rc
+ln -s ~/git/dotfiles/tint2/tint2rc ~/.config/tint2/tint2rc
 mkdir ~/.config/openbox/pipemenus
 rm ~/.config/openbox/pipemenus/obpipemenu-places
 ln -s ~/git/dotfiles/openbox/pipemenus/obpipemenu-places ~/.config/openbox/pipemenus/obpipemenu-places
