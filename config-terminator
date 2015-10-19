@@ -38,12 +38,12 @@
       ratio = 0.5
       type = VPaned
     [[[terminal3]]]
+      command = ""
       order = 0
       parent = child2
       profile = solarized-dark-mini
       type = Terminal
       uuid = ae2e3f6f-84da-4eb5-ad7d-6402b649cdcb
-      command = ''
     [[[terminal4]]]
       command = ""
       order = 1
@@ -52,12 +52,12 @@
       type = Terminal
       uuid = 38ba49b0-bb39-4ff2-9c92-a520b05e9517
     [[[terminal5]]]
+      command = cd ~/git; fish
       order = 1
       parent = child1
       profile = solarized-dark
       type = Terminal
       uuid = 4981fb2c-dc92-4635-b453-65b08c5fccac
-      command = 'cd ~/git; fish'
 [plugins]
 [profiles]
   [[default]]
@@ -66,7 +66,7 @@
     background_image = None
     copy_on_selection = True
     cursor_color = "#bbbbbb"
-    font = Inconsolata 12
+    font = Inconsolata-dz for Powerline Medium 10
     foreground_color = "#abb2bf"
     icon_bell = False
     palette = "#000000:#eb6e67:#95ee8f:#f8c456:#6eaafb:#d886f3:#6cdcf7:#b2b2b2:#50536b:#eb6e67:#95ee8f:#f8c456:#6eaafb:#d886f3:#6cdcf7:#dfdfdf"
@@ -90,7 +90,7 @@
     background_color = "#002b36"
     background_image = None
     cursor_color = "#bbbbbb"
-    font = Inconsolata 11
+    font = Inconsolata-dz for Powerline Medium 10
     foreground_color = "#eee8d5"
     palette = "#073642:#dc322f:#859900:#b58900:#268bd2:#d33682:#2aa198:#eee8d5:#002b36:#cb4b16:#586e75:#657b83:#839496:#6c71c4:#93a1a1:#fdf6e3"
     scrollbar_position = hidden
@@ -100,7 +100,7 @@
     background_color = "#002b36"
     background_image = None
     cursor_color = "#bbbbbb"
-    font = Inconsolata 9
+    font = Inconsolata-dz for Powerline Medium 8
     foreground_color = "#eee8d5"
     palette = "#073642:#dc322f:#859900:#b58900:#268bd2:#d33682:#2aa198:#eee8d5:#002b36:#cb4b16:#586e75:#657b83:#839496:#6c71c4:#93a1a1:#fdf6e3"
     scrollbar_position = hidden
@@ -111,7 +111,7 @@
     background_image = None
     copy_on_selection = True
     cursor_color = "#002b36"
-    font = Inconsolata Medium 11
+    font = Inconsolata-dz for Powerline Medium 9
     foreground_color = "#002b36"
     palette = "#073642:#dc322f:#859900:#b58900:#268bd2:#d33682:#2aa198:#eee8d5:#002b36:#cb4b16:#586e75:#657b83:#839496:#6c71c4:#93a1a1:#fdf6e3"
     scrollbar_position = hidden
