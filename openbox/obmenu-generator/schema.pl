@@ -3,7 +3,7 @@ require '/home/lale/.config/obmenu-generator/config.pl';
 our $SCHEMA = [
     #{sep => 'ArchBang'},
     #             COMMAND                 LABEL                ICON
-    {item => ['spacefm',           'File Manager',      'file-manager']},
+    {item => ['thunar',            'File Manager',      'file-manager']},
     {item => [$CONFIG->{terminal}, 'Terminal',          'terminal']},
     {item => [$CONFIG->{editor},   'Editor',            'text-editor']},
     {item => ['firefox',           'Web Browser',       'web-browser']},
