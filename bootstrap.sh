@@ -5,6 +5,8 @@ rm ~/.config/terminator/config
 ln -s ~/git/dotfiles/config-terminator ~/.config/terminator/config
 rm ~/.config/fish/config.fish
 ln -s ~/git/dotfiles/config.fish ~/.config/fish/config.fish
+rm ~/.config/smplayer/smplayer.ini
+ln -s ~/git/dotfiles/smplayer.ini ~/.config/smplayer/smplayer.ini
 rm ~/.config/openbox/rc.xml
 ln -s ~/git/dotfiles/openbox/rc.xml ~/.config/openbox/rc.xml
 rm ~/.config/openbox/menu.xml
