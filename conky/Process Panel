@@ -67,7 +67,7 @@ ${top_mem name 5} $alignr ${top_mem mem_res 5}
 ${color2}DISCO${color0}${alignr}${fs_free /}/${fs_size /} 
 #
 ${if_existing /proc/net/route wlp2s0}
-${color2}INTERNET WLAN${color0}${alignr}${wireless_essid wlp2s0}
+${color2}INTERNET WLAN${color0}${alignr} ${wireless_essid wlp2s0}
 ${color2}IP:${color0}${alignr}${addr wlp2s0}
 Bajada:$alignr${downspeed wlp2s0}/s ${totaldown wlp2s0}
 ${color1}${downspeedgraph wlp2s0 -l t}${color}
