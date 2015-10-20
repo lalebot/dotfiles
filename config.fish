@@ -5,11 +5,11 @@ set -g OMF_PATH $HOME/.local/share/omf
 source $OMF_PATH/init.fish
 
 ################################################################################
-set fish_greeting "Ahora a hacer algo magníficou..."
+set fish_greeting "¡Ahora a hacer algo magníficouch!"
 
 # ALIAS
 
-alias u 'yaourt -Syu'
+alias u 'yaourt -Syu --aur'
 
 alias cd.. 'cd ..'
 alias .. 'cd ..'
@@ -18,6 +18,7 @@ alias .... 'cd ../../..'
 alias ..... 'cd ../../../..'
 
 alias ef 'vim ~/.config/fish/config.fish'
+alias eau 'vim ~/.config/openbox/autostart'
 alias ev 'vim ~/.vimrc'
 
 alias l ls
