@@ -25,7 +25,7 @@ $ yaourt -S tilda terminator sakura
 
 ### Openbox
 ```bash
-$ yaourt -S openbox obmenu obmenu-generator obkey obconf lxappearance slim slim-themes xorg-xev menumaker nitrogen tint2 xorg-xkill gsimplecal pnmixer xscreensaver gmrun lxrandr plank
+$ yaourt -S openbox obmenu obmenu-generator obkey obconf lxappearance slim slim-themes xorg-xev menumaker nitrogen tint2 xorg-xkill gsimplecal pnmixer xscreensaver gmrun lxrandr plank galculator
 ```
 
 Generate menu in desktop:
