@@ -75,7 +75,7 @@
 our $CONFIG = {
   "editor"              => "geany",
   "Linux::DesktopFiles" => {
-                             desktop_files_paths     => ["/usr/share/applications"],
+                             desktop_files_paths     => ["/usr/share/applications", "/usr/local/share/applications"],
                              gtk_rc_filename         => "/home/lale/.gtkrc-2.0",
                              icon_dirs_first         => undef,
                              icon_dirs_last          => undef,
