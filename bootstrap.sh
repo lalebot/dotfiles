@@ -1,4 +1,6 @@
 #!/bin/sh
+rm ~/.xinit
+ln -s ~/git/dotfiles/.xinit ~/.xinit
 rm ~/.vimrc
 ln -s ~/git/dotfiles/vimrc ~/.vimrc
 rm ~/.config/terminator/config
