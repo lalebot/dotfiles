@@ -9,7 +9,9 @@ set fish_greeting "¡Ahora a hacer algo magníficouch!"
 
 # ALIAS
 
+alias r 'sudo reflector --sort rate -l 5 --save /etc/pacman.d/mirrorlist'
 alias u 'yaourt -Syu --aur'
+alias uc 'yaourt -Syyu --aur --devel'
 alias y 'yaourt'
 alias yr 'yaourt -R'
 alias ys 'yaourt -S'

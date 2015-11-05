@@ -116,6 +116,7 @@ $ git branch --no-merged
 ```bash
 $ git fetch # Traer los cambios desde el servidor
 $ git push (remoto) (rama-local) # Publicar rama para compartirla
+$ git push --set-upstream origin remote # Publicar rama para compartirla por primera vez ¿?
 $ git push origin serverfix:awesomebranch # Para llevar tu rama serverfix local a la rama awesomebranch en el proyecto remoto
 $ git checkout -b a-v origin/arreglos-varios # Crear una rama a-v que esta vinculada con la rama remota arreglos-varios
 $ git checkout --track origin/arreglos-varios # Seguimiento de ramas remotas con mismo nombre
