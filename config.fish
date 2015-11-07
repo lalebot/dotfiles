@@ -30,6 +30,7 @@ alias l ls
 alias ll 'ls -la'
 alias c clear
 alias v vim
+alias jd 'JDownloader'
 alias md 'mkdir -p'
 
 alias g git
