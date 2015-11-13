@@ -98,10 +98,14 @@ $ screenfetch
 ```
 
 #### Samba
+
+Ver http://www.ubuntu-es.org/node/169303
+
 ```
-sudo pacman -S samba smbclient
+yaourt -S samba smbclient system-config-samba gvfs gvfs-smb gvfs-nfs  (gvfs-afc gvfs-goa gvfs-google gvfs-gphoto2 gvfs-mtp) ¿?
+ntfs-3g 
 sudo cp /etc/samba/smb.conf.default /etc/samba/smb.conf
-sudo systemclt start smbd nmbd
+sudo systemctl start smbd nmbd
 # reiniciar
 sudo smbpasswd -a usuario
 sudo nano /etc/samba/smb.conf
@@ -114,6 +118,10 @@ sudo nano /etc/samba/smb.conf
 sudo mount -t cifs -o username=User,password=pass //ip/utorrent /mnt/win7
 ```
 
+```
+thunar
+g2sc
+```
 
 # Arch install
 

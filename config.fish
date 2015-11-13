@@ -14,7 +14,7 @@ alias u 'yaourt -Syu --aur'
 alias uc 'yaourt -Syyu --aur --devel'
 alias y 'yaourt'
 alias yr 'yaourt -R'
-alias ys 'yaourt -S'
+alias ys 'yaourt -Sy'
 
 alias cd.. 'cd ..'
 alias .. 'cd ..'
