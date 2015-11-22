@@ -17,6 +17,7 @@ alias y 'yaourt'
 alias yr 'yaourt -R'
 alias ys 'yaourt -S'
 alias ai 'sudo systemctl start org.cups.cupsd.service'
+alias ys 'yaourt -Sy'
 
 alias cd.. 'cd ..'
 alias .. 'cd ..'
