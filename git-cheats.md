@@ -67,6 +67,10 @@ $ git log --pretty=format:"%h - %an, %ar : %s" --graph --since=2.weeks
 ### Deshacer cambios
 ```bash
 $ git checkout -- archivo.md # Revierte el archivo a su último estado confirmado
+
+$ git log --pretty=format:"%h - %an, %ar : %s" # %h te da el hash del commit abreviado %H te lo da completo
+
+$ git checkout hash_commit_quiero
 ```
 
 ### Repositorios remotos
