@@ -27,7 +27,8 @@ Generate menu in desktop:
 $ menumaker - mmaker -vf OpenBox3
 ```
 
-Theme: Numix - Numix-Solarized - Arc - paper - 
+Theme: Numix - Numix-Solarized - Arc - paper
+
 Icons: flattr - ultra-flattr - super-flat-remix - area - moka - uniform - dalisha - numix - numix-icon-theme-circle - paper
 
 ### Programas
@@ -51,7 +52,7 @@ $ sudo pip3 install mps-youtube
 
 ### Dev
 ```bash
-$ yaourt -S vim git sublimetext geany python perl godot-git
+$ yaourt -S vim git sublime-text-dev atom-editor geany python perl godot-git
 ```
 
 ### Fish shell
