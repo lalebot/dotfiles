@@ -52,7 +52,7 @@ $ sudo pip3 install mps-youtube
 
 ### Dev
 ```bash
-$ yaourt -S vim git sublime-text-dev atom-editor geany python perl godot-git
+$ yaourt -S vim git atom-editor geany python perl godot-git
 ```
 
 ### Fish shell
@@ -60,13 +60,10 @@ $ yaourt -S vim git sublime-text-dev atom-editor geany python perl godot-git
 $ yaourt -S fish # Install fish
 $ chsh -s /usr/bin/fish # Default fish
 
-# oh-my-fish
-$ curl -L github.com/oh-my-fish/oh-my-fish/raw/master/bin/install | sh
-$ omf theme agnoster
-
-# wa
-$ curl -L git.io/wa | sh
-$ wa use agnoster #agnoster_powerline to your .dotfiles/init.fish
+# Fisherman
+$ curl -sL get.fisherman.sh | fish
+$ fisher install shellder
+$ fisher update
 
 $ yaourt -S python-powerline-git
 ```
@@ -129,6 +126,40 @@ sudo mount -t cifs -o username=User,password=pass //ip/utorrent /mnt/win7
 thunar
 g2sc
 ```
+
+### Steam
+
+```
+sudo pacman -S steam lib32-nvidia-utils lib32-alsa-plugins lib32-flashplugin lib32-mesa
+```
+
+Hybrid Graphic:
++ http://www.b2hq.com/blog/hybrid-graphics-arch-linux-and-lenovo-thinkpad-e520
++ https://help.ubuntu.com/community/HybridGraphics
++ https://bbs.archlinux.org/viewtopic.php?id=177254
+```
+sudo cat /sys/kernel/debug/vgaswitcheroo/switch
+```
+
+The Talos principle
+```
+env LD_PRELOAD='/usr/lib32/libasound.so.2:/usr/lib64/libasound.so.2' /usr/bin/steam
+```
+
+FEZ
+```
+ sh  ~/.local/share/Steam/steamapps/common/FEZ/FEZ
+```
+
+Ver la version del OpenGL
+```
+glxinfo | grep OpenGL
+```
+
+
+ocl-icd open-catalyst
+
+
 
 # Arch install
 
