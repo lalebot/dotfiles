@@ -1,8 +1,7 @@
 ################################################################################
-# Path to your oh-my-fish.
-set -g OMF_PATH $HOME/.local/share/omf
-# Load oh-my-fish configuration.
-source $OMF_PATH/init.fish
+set -g WAHOO_PATH $HOME/.wahoo
+set -g WAHOO_CUSTOM $HOME/.dotfiles
+source $WAHOO_PATH/init.fish
 
 ################################################################################
 set fish_greeting "¡Ahora a hacer algo magníficouch!"

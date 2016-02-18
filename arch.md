@@ -15,11 +15,11 @@ $ sudo pacman -S yaourt
 
 ### Base
 ```bash
-$ yaourt -S base base-devel samba htop tmux tilda terminator sakura archey3 wget nethogs jre8-openjdk mlocate xdiskusage iptraf lxrandr xorg-xkill
+$ yaourt -S base base-devel samba htop tmux tilda terminator sakura archey3 wget nethogs jre8-openjdk mlocate xdiskusage iptraf lxrandr xorg-xkill linux-headers mesa-demos lib32-mesa-demos
 ```
 
 ```bash
-$ yaourt -S openbox obmenu obmenu-generator obkey obconf lxappearance slim slim-themes xorg-xev menumaker nitrogen tint2  gsimplecal pnmixer volumeicon pavucontrol reflector xscreensaver gmrun plank galculator clipit
+$ yaourt -S openbox obmenu obmenu-generator obkey obconf lxappearance slim slim-themes xorg-xev menumaker nitrogen tint2  gsimplecal pnmixer volumeicon pavucontrol reflector xscreensaver gmrun plank galculator clipit hardinfo catfish
 ```
 
 Generate menu in desktop:
@@ -101,6 +101,7 @@ $ asciiquarium
 $ oneko -tofocus -bg grey -fg black -tora
 $ telnet towel.blinkenlights.nl 666
 $ screenfetch
+$ curl wttr.in
 ```
 
 #### Samba
