@@ -1,30 +1,29 @@
 # Archlinux Configuration
 
-### Base
+## Base
 
 add **/etc/pacman.conf**
-```
+```bash
 [archlinuxfr]
 SigLevel = Never
 Server = http://repo.archlinux.fr/$arch
 ```
 
 ```bash
-$ sudo pacman -S yaourt
-```
-
-### Base
-```bash
-$ yaourt -S base base-devel samba htop tmux tilda terminator sakura archey3 wget nethogs jre8-openjdk mlocate xdiskusage iptraf lxrandr xorg-xkill linux-headers mesa-demos lib32-mesa-demos
+sudo pacman -S yaourt
 ```
 
 ```bash
-$ yaourt -S openbox obmenu obmenu-generator obkey obconf lxappearance slim slim-themes xorg-xev menumaker nitrogen tint2  gsimplecal pnmixer volumeicon pavucontrol reflector xscreensaver gmrun plank galculator clipit hardinfo catfish
+yaourt -S base base-devel samba htop tmux tilda terminator sakura archey3 wget nethogs jre8-openjdk mlocate xdiskusage iptraf lxrandr xorg-xkill linux-headers mesa-demos lib32-mesa-demos
+```
+
+```bash
+yaourt -S openbox obmenu obmenu-generator obkey obconf lxappearance slim slim-themes xorg-xev menumaker nitrogen tint2  gsimplecal pnmixer volumeicon pavucontrol reflector xscreensaver gmrun plank galculator clipit hardinfo catfish
 ```
 
 Generate menu in desktop:
 ```bash
-$ menumaker - mmaker -vf OpenBox3
+menumaker - mmaker -vf OpenBox3
 ```
 
 Theme: Numix - Numix-Solarized - Arc - paper
@@ -33,39 +32,38 @@ Icons: flattr - ultra-flattr - super-flat-remix - area - moka - uniform - dalish
 
 ### Programas
 ```bash
-$ yaourt -S thunar thunar-volman gvfs gvfs-afc gvfs-smb thunar-archive-plugin xarchiver unrar unzip zip reactor
-$ yaourt -S evince2-light npm firefox iceweasel chromium scrot xclip alsa-utils alsa-ogg flashplugin transmission-gtk mirage
-$ yaourt -S wps megasync 
-
+yaourt -S thunar thunar-volman gvfs gvfs-afc gvfs-smb thunar-archive-plugin xarchiver unrar unzip zip reactor
+yaourt -S evince2-light npm firefox iceweasel chromium scrot xclip alsa-utils alsa-ogg flashplugin transmission-gtk mirage
+yaourt -S wps megasync
 ```
 
 ```bash
-$ yaourt -S tlp tlp-rdw smartmontools ethtool
+yaourt -S tlp tlp-rdw smartmontools ethtool
 ```
 
 ### Multimedia
 ```bash
-$ yaourt -S smplayer  feh clementine
-$ yaourt -S python-pip
-$ sudo pip3 install mps-youtube
+yaourt -S smplayer  feh clementine
+yaourt -S python-pip
+sudo pip3 install mps-youtube
 ```
 
 ### Dev
 ```bash
-$ yaourt -S vim git atom-editor geany python perl godot-git
+ yaourt -S vim git atom-editor geany python perl godot-git
 ```
 
 ### Fish shell
 ```bash
-$ yaourt -S fish # Install fish
-$ chsh -s /usr/bin/fish # Default fish
+ yaourt -S fish # Install fish
+chsh -s /usr/bin/fish # Default fish
 
 # Fisherman
-$ curl -sL get.fisherman.sh | fish
-$ fisher install shellder
-$ fisher update
+curl -sL get.fisherman.sh | fish
+fisher install shellder
+fisher update
 
-$ yaourt -S python-powerline-git
+yaourt -S python-powerline-git
 ```
 
 https://github.com/powerline/fonts
@@ -73,15 +71,43 @@ https://github.com/ryanoasis/nerd-fonts
 
 #### Vim Bundle
 ```bash
-$ curl https://raw.githubusercontent.com/Shougo/neobundle.vim/master/bin/install.sh > install.sh
-$ sh install.sh
+curl https://raw.githubusercontent.com/Shougo/neobundle.vim/master/bin/install.sh > install.sh
+sh install.sh
+```
+
+#### Atom-Editor
+```bash
+apm install minimap file-icons open-recent remember-file-position zentabs
+apm install vim-mode language-markdown language-python lang-gdscript autocomplete-plus autocomplete-python octocat-syntax atom-beautify linter linter-markdown linter-python activate-power-mode fonts highlight-selected minimap-highlight-selected git-plus
+
+# Python
+pip install flake8
+pip install flake8-docstrings
+apm install linter-flake8
+
+# http://enrmarc.github.io/atom-theme-gallery/
+apm install base16-tomorrow-dark-theme predawn-ui
+apm upgrade
+
+# Ver
+apm install TODO-show
+```
+
+Add keymap.cson
+```
+'atom-text-editor.vim-mode':
+  'ctrl-c': 'core:copy'
+
+'.editor':
+  'ctrl-v': 'native!'
+  'ctrl-p': 'native!'
 ```
 
 ### Instalar HP
 ```bash
-$ yaourt -S cups-filters avahi ghostscript gsfonts hplip system-config-printer
-$ sudo systemctl start org.cups.cupsd.service
-$ systemctl-config-printer
+yaourt -S cups-filters avahi ghostscript gsfonts hplip system-config-printer
+sudo systemctl start org.cups.cupsd.service
+systemctl-config-printer
 ```
 
 ### Curiosidades
@@ -107,7 +133,7 @@ Ver http://www.ubuntu-es.org/node/169303
 
 ```
 yaourt -S samba smbclient system-config-samba gvfs gvfs-smb gvfs-nfs  (gvfs-afc gvfs-goa gvfs-google gvfs-gphoto2 gvfs-mtp) ¿?
-ntfs-3g 
+ntfs-3g
 sudo cp /etc/samba/smb.conf.default /etc/samba/smb.conf
 sudo systemctl start smbd nmbd
 # reiniciar
@@ -262,4 +288,3 @@ sudo hwclock --systohc --utc
 $ sudo iwconfig
 $ sudo nethogs wlp2s0
 ```
-
