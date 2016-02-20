@@ -78,7 +78,7 @@ sh install.sh
 #### Atom-Editor
 ```bash
 apm install minimap file-icons open-recent remember-file-position zentabs
-apm install vim-mode language-markdown language-python lang-gdscript autocomplete-plus autocomplete-python octocat-syntax atom-beautify linter linter-markdown linter-python activate-power-mode fonts highlight-selected minimap-highlight-selected git-plus
+apm install vim-mode language-markdown language-python lang-gdscript autocomplete-plus autocomplete-python atom-beautify linter linter-markdown linter-python activate-power-mode fonts highlight-selected minimap-highlight-selected git-plus
 
 # Python
 pip install flake8
