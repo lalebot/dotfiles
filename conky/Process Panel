@@ -31,7 +31,7 @@ own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
 
 minimum_size 170 0
 stippled_borders 0
-update_interval 2.0
+update_interval 3.0
 uppercase no
 use_spacer none
 
@@ -45,10 +45,11 @@ color0 white
 color1 EAEAEA
 color2 FFA300
 color3 grey
+lanx enp3s0
 
 TEXT
 ${color2}HACER ${color0}
-${font Droid Sans:size=8}${execi 240 cat $HOME/Mega/Vida/Hacer.txt | grep -E '^-|^--'}${font}
+${font Droid Sans:size=8}${execi 800 cat $HOME/Mega/Vida/Hacer.txt | grep -E '^-|^--'}${font}
 
 ${color2}CPU ${color0}${alignr}${cpu cpu0}%/${freq_g}GHz
 ${cpubar cpu0 5,}
@@ -61,15 +62,14 @@ ${membar 5,}
 ${top_mem name 1} $alignr ${top_mem mem_res 1}
 ${top_mem name 2} $alignr ${top_mem mem_res 2}
 ${top_mem name 3} $alignr ${top_mem mem_res 3}
-${top_mem name 4} $alignr ${top_mem mem_res 4}
-${top_mem name 5} $alignr ${top_mem mem_res 5}
 
-${color2}DISCO${color0}${alignr}${fs_free /}/${fs_size /} 
+${color2}DISCO${color0}${alignr}${fs_free /}/${fs_size /}
 #
-${if_existing /proc/net/route wlp2s0}
-${color2}WLAN${color0}${alignr} ${wireless_essid wlp2s0}
-${color2}IP:${color0}${alignr}${addr wlp2s0}
-Bajada:$alignr${downspeed wlp2s0}/s ${totaldown wlp2s0}
-${color1}${downspeedgraph wlp2s0 -l t}${color}
+${if_existing /proc/net/route enp3s0}
+${color2}WLAN${color0}${alignr} ${wireless_essid enp3s0}
+${color2}IP:${color0}${alignr}${addr enp3s0}
+Bajada:$alignr${downspeed enp3s0}/s ${totaldown enp3s0}
+${color1}${downspeedgraph enp3s0 -l t}${color}
+${endif}
 # Subida:$alignr${upspeed wlp2s0}/s ${totalup wlp2s0}
 # ${color1}${upspeedgraph wlp2s0 -l t}${color}
