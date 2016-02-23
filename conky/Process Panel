@@ -71,5 +71,13 @@ ${color2}IP:${color0}${alignr}${addr enp3s0}
 Bajada:$alignr${downspeed enp3s0}/s ${totaldown enp3s0}
 ${color1}${downspeedgraph enp3s0 -l t}${color}
 ${endif}
+#
+${if_existing /proc/net/route wlo1}
+${color2}WLAN${color0}${alignr} ${wireless_essid wlo1}
+${color2}IP:${color0}${alignr}${addr wlo1}
+Bajada:$alignr${downspeed wlo1}/s ${totaldown wlo1}
+${color1}${downspeedgraph wlo1 -l t}${color}
+${endif}
+#
 # Subida:$alignr${upspeed wlp2s0}/s ${totalup wlp2s0}
 # ${color1}${upspeedgraph wlp2s0 -l t}${color}
