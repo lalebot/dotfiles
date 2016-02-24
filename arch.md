@@ -99,8 +99,8 @@ Add keymap.cson
   'ctrl-c': 'core:copy'
 
 '.editor':
-  'ctrl-v': 'native!'
-  'ctrl-p': 'native!'
+  'ctrl-c': 'core:copy'
+  'ctrl-p': 'core:paste'
 ```
 
 ### Instalar HP
