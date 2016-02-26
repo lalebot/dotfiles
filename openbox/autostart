@@ -20,6 +20,7 @@ setxkbmap es
 #(sleep 5s && pnmixer) &
 #(sleep 5s && numlockx) &
 (sleep 5s && clipit) &
+(sleep 5s && thunar --daemon) &
 
 #(sleep 10s && xscreensaver -no-splash) &
 
