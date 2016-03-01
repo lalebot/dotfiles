@@ -76,8 +76,10 @@ ${if_existing /proc/net/route wlo1}
 ${color2}WLAN${color0}${alignr} ${wireless_essid wlo1}
 ${color2}IP:${color0}${alignr}${addr wlo1}
 Bajada:$alignr${downspeed wlo1}/s ${totaldown wlo1}
-${color1}${downspeedgraph wlo1 -l t}${color}
-${endif}
+${color1}${downspeedgraph wlo1 -l t}${color}${endif}
 #
 # Subida:$alignr${upspeed wlp2s0}/s ${totalup wlp2s0}
 # ${color1}${upspeedgraph wlp2s0 -l t}${color}
+#
+#${color orange}CALENDARIO ${hr 2}$color
+#${font DejaVu Sans Mono :size=10}${execpi 600 DJS=`date +%_d`; cal | sed s/"\(^\|[^0-9]\)$DJS"'\b'/'\1${color orange}'"$DJS"'$color'/}
