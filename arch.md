@@ -34,7 +34,7 @@ Icons: flattr - ultra-flattr - super-flat-remix - area - moka - uniform - dalish
 ```bash
 yaourt -S thunar thunar-volman gvfs gvfs-afc gvfs-smb thunar-archive-plugin xarchiver unrar unzip zip reactor
 yaourt -S evince2-light npm firefox iceweasel chromium scrot xclip alsa-utils alsa-ogg flashplugin transmission-gtk mirage
-yaourt -S wps megasync
+yaourt -S wps megasync alarm-clock
 ```
 
 ```bash
